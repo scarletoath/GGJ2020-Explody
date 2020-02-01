@@ -25,3 +25,8 @@ obj/
 #Mac index files
 .DS_Store
 ._.DS_Store
+Explody/Sound/.backup
+Explody/Sound/.cache
+Explody/Sound/PLODE.crossover.validationcache
+Explody/Sound/PLODE.crossover.wsettings
+Explody/Sound/Originals
