@@ -4,17 +4,13 @@ using UnityEngine;
 
 public class TimeSlow : MonoBehaviour
 {
-    [SerializeField]
-    float initialSlowTime;
+    [SerializeField] float initialSlowTime;
 
-    [SerializeField]
-    float timeToSlow;
+    [SerializeField] float timeToSlow;
 
-    [SerializeField]
-    float targetTimeScale;
+    [SerializeField] float targetTimeScale;
 
-    [SerializeField]
-    float unSlowTime;
+    [SerializeField] float unSlowTime;
 
     float originalTimeScale;
     float startTime = -1;
@@ -29,10 +25,10 @@ public class TimeSlow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            startTime = Time.time;
-        }
+        //if(Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    startTime = Time.time;
+        //}
 
         if (startTime > 0)
         {
@@ -60,5 +56,8 @@ public class TimeSlow : MonoBehaviour
         }
     }
 
-
+    public void StartSlowDown()
+    {
+        startTime = Time.time;
+    }
 }
