@@ -13,17 +13,18 @@ public class Eruption : MonoBehaviour
     //}
 
     // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Debug.Log("Erupting");
-            StartEruption();
-        }
-    }
+    //void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.Space))
+    //    {
+    //        Debug.Log("Erupting");
+    //        StartEruption();
+    //    }
+    //}
 
     public void StartEruption()
     {
+        Debug.Log( "Erupting" );
         GameObject[] Pieces = GameObject.FindGameObjectsWithTag("Piece");
         foreach (GameObject obj in Pieces)
         {
