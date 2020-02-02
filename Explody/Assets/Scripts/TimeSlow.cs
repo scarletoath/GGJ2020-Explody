@@ -55,9 +55,9 @@ public class TimeSlow : MonoBehaviour
             {
                 Debug.Log( "TIME'S UP" );
                 GameController.Instance.OnComplete();
-                Time.timeScale = originalTimeScale;
-                startTime = -1;
-            }
+                StopSlowDown ();
+				return;
+			}
 
 			OnRealTimeElapsed.Invoke ( elapsedRealTime );
 		}
@@ -67,4 +67,11 @@ public class TimeSlow : MonoBehaviour
     {
         startTime = Time.realtimeSinceStartup;
     }
+
+	public void StopSlowDown ()
+	{
+		startTime = -1;
+		Time.timeScale = originalTimeScale;
+		OnRealTimeElapsed.Invoke ( -1 );
+	}
 }

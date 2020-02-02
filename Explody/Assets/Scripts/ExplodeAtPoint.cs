@@ -1,6 +1,5 @@
-﻿using System.Linq;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
+using System.Linq;
 using UnityEngine;
 
 public class ExplodeAtPoint : MonoBehaviour
@@ -43,7 +42,6 @@ public class ExplodeAtPoint : MonoBehaviour
 			Explodable.explode ();
 		}
 		ExplosionForce.doExplosion ( Position );
-		GameObject.FindGameObjectWithTag("TimeSlow").GetComponent<TimeSlow>().StartSlowDown();
 		StartCoroutine(SetSnappables());
 	}
 
@@ -59,8 +57,12 @@ public class ExplodeAtPoint : MonoBehaviour
 
 	IEnumerator SetSnappables()
 	{
-		yield return new WaitForSeconds(.5f);
 		GameObject[] Pieces = GameObject.FindGameObjectsWithTag("Piece");
+		foreach (GameObject obj in Pieces)
+		{
+			GameController.Instance.RegisterSnap(obj.GetComponent<SnapToLocation>());
+		}
+		yield return new WaitForSecondsRealtime(.5f);
 		foreach (GameObject obj in Pieces)
 		{
 			obj.GetComponent<SnapToLocation>().StartTracking();

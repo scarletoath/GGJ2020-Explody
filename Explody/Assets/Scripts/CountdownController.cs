@@ -33,7 +33,7 @@ public class CountdownController : MonoBehaviour
 
 	public void SetElapsedRealTime ( float ElapsedRealTime )
 	{
-		countdownDisplay.text = $"{countdownTime - ElapsedRealTime:F0}";
+		countdownDisplay.text = ElapsedRealTime >= 0 ? $"{countdownTime - ElapsedRealTime:F0}" : string.Empty;
 	}
 
 }

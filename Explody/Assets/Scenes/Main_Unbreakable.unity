@@ -378,6 +378,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de371e900d9e087459ba75c23b8e5e14, type: 3}
+--- !u!114 &405824451 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 846211730457423495, guid: ef2790059da1fd446a409b54f0430d1f,
+    type: 3}
+  m_PrefabInstance: {fileID: 7968135891541991683}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c2b8e9888876f646a697a4ab9789750, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &842436756
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -489,6 +501,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameController
       objectReference: {fileID: 0}
+    - target: {fileID: 995737547242220511, guid: 74af8bfdac6942445b245783fbd6a9d9,
+        type: 3}
+      propertyPath: TimeSlow
+      value: 
+      objectReference: {fileID: 1091057231}
+    - target: {fileID: 995737547242220511, guid: 74af8bfdac6942445b245783fbd6a9d9,
+        type: 3}
+      propertyPath: StarRating
+      value: 
+      objectReference: {fileID: 405824451}
     - target: {fileID: 1125842290988815263, guid: 74af8bfdac6942445b245783fbd6a9d9,
         type: 3}
       propertyPath: Camera
@@ -690,6 +712,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 7968135891541991683}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1091057231 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9172920535809352241, guid: 698412d975e0ec245ba2cf5541e07c81,
+    type: 3}
+  m_PrefabInstance: {fileID: 1620872967}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7dd672d1f70c374087e43554db3f8f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1194768357
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1269,11 +1303,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 578907630441615363, guid: ef2790059da1fd446a409b54f0430d1f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1793231600361674017, guid: ef2790059da1fd446a409b54f0430d1f,
         type: 3}

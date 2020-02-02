@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class EdgeDeath : MonoBehaviour
 {
@@ -21,7 +19,9 @@ public class EdgeDeath : MonoBehaviour
     {
         // do explosion effects
         if (col.CompareTag("Piece"))
-        {
+		{
+			Debug.Log ( $"destroy {col}" );
+			GameController.Instance.UnregisterSnap ( col.GetComponent <SnapToLocation> () );
             Destroy(col.gameObject);
         }
     }

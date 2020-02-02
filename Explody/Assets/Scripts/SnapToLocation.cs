@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SnapToLocation : MonoBehaviour
 {
@@ -31,7 +29,8 @@ public class SnapToLocation : MonoBehaviour
                 positionIsFixed = true;
                 transform.position = originalLocation;
                 CreateLockedInAchieved();
-            }
+				GameController.Instance.UnregisterSnap ( this );
+			}
         }
 
         if (Input.GetKeyDown(KeyCode.Q))
@@ -61,9 +60,10 @@ public class SnapToLocation : MonoBehaviour
 
     public void StartTracking()
     {
-        Debug.Log("Starting to track for snaps");
+        Debug.Log($"Starting to track for snaps {name}");
         lookForSnaps = true;
-    }
+		//GameController.Instance.RegisterSnap ( this );
+	}
 
     public bool GetPositionIsFixed()
     {
