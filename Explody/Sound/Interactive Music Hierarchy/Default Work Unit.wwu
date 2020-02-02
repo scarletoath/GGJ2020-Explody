@@ -177,10 +177,8 @@
 									<PropertyList>
 										<Property Name="IsFolder" Type="bool" Value="True"/>
 									</PropertyList>
-									<ReferenceList/>
 									<ChildrenList>
 										<MusicTransition Name="Transition" ID="{35A749B4-2969-419E-829C-EE118A0E1003}">
-											<ReferenceList/>
 											<TransitionInfo/>
 										</MusicTransition>
 									</ChildrenList>
@@ -281,9 +279,9 @@
 													<ClipList>
 														<MusicClip Name="Bass" ID="{74F278C6-0F3C-45A8-A851-37F1906F2EA2}">
 															<PropertyList>
-																<Property Name="EndTrimOffset" Type="Real64" Value="32500"/>
+																<Property Name="EndTrimOffset" Type="Real64" Value="34000"/>
 																<Property Name="FadeInMode" Type="int16" Value="0"/>
-																<Property Name="FadeOutDuration" Type="Real64" Value="488.205128205129"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="1952.82051282051"/>
 															</PropertyList>
 															<AudioSourceRef Name="Bass" ID="{403D603E-D572-477E-9A49-E2C30ECB28FB}"/>
 															<PropertyCurveList>
@@ -299,7 +297,7 @@
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
-																				<XPos>32.5</XPos>
+																				<XPos>34</XPos>
 																				<YPos>0</YPos>
 																				<Flags>37</Flags>
 																			</Point>
@@ -318,7 +316,7 @@
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
-																				<XPos>32.5</XPos>
+																				<XPos>34</XPos>
 																				<YPos>0</YPos>
 																				<Flags>37</Flags>
 																			</Point>
@@ -337,7 +335,7 @@
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
-																				<XPos>32.5</XPos>
+																				<XPos>34</XPos>
 																				<YPos>0</YPos>
 																				<Flags>37</Flags>
 																			</Point>
@@ -433,7 +431,7 @@
 							<ChildrenList>
 								<MusicSegment Name="Cello" ID="{BBA3E8F7-1BA6-4310-9AAE-A652C5E72A76}" ShortID="871217282">
 									<PropertyList>
-										<Property Name="EndPosition" Type="Real64" Value="34000"/>
+										<Property Name="EndPosition" Type="Real64" Value="34500"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -469,9 +467,9 @@
 													<ClipList>
 														<MusicClip Name="Cello" ID="{F9FAA7F0-FA29-49E7-B3D5-3B5B7D9E443E}">
 															<PropertyList>
-																<Property Name="EndTrimOffset" Type="Real64" Value="32500"/>
+																<Property Name="EndTrimOffset" Type="Real64" Value="33500"/>
 																<Property Name="FadeInMode" Type="int16" Value="0"/>
-																<Property Name="FadeOutDuration" Type="Real64" Value="453.333333333336"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="1534.35897435898"/>
 															</PropertyList>
 															<AudioSourceRef Name="Cello" ID="{81A55F0B-113E-4031-B57B-33323313B4B1}"/>
 															<PropertyCurveList>
@@ -487,7 +485,7 @@
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
-																				<XPos>32.5</XPos>
+																				<XPos>33.5</XPos>
 																				<YPos>0</YPos>
 																				<Flags>37</Flags>
 																			</Point>
@@ -506,7 +504,7 @@
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
-																				<XPos>32.5</XPos>
+																				<XPos>33.5</XPos>
 																				<YPos>0</YPos>
 																				<Flags>37</Flags>
 																			</Point>
@@ -525,7 +523,7 @@
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
-																				<XPos>32.5</XPos>
+																				<XPos>33.5</XPos>
 																				<YPos>0</YPos>
 																				<Flags>37</Flags>
 																			</Point>
@@ -662,9 +660,9 @@
 													<ClipList>
 														<MusicClip Name="Mangled Cello" ID="{9539ADE8-53A1-433B-A506-7677F4E3ECC5}">
 															<PropertyList>
-																<Property Name="EndTrimOffset" Type="Real64" Value="22500"/>
+																<Property Name="EndTrimOffset" Type="Real64" Value="23500"/>
 																<Property Name="FadeInDuration" Type="Real64" Value="492.307692307692"/>
-																<Property Name="FadeOutDuration" Type="Real64" Value="516.923076923085"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="1501.53846153847"/>
 															</PropertyList>
 															<AudioSourceRef Name="Mangled Cello" ID="{DCECFDEE-C704-448F-9EF2-D8B0F91D3BE6}"/>
 															<PropertyCurveList>
@@ -680,7 +678,7 @@
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
-																				<XPos>22.5</XPos>
+																				<XPos>23.5</XPos>
 																				<YPos>0</YPos>
 																				<Flags>37</Flags>
 																			</Point>
@@ -699,7 +697,7 @@
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
-																				<XPos>22.5</XPos>
+																				<XPos>23.5</XPos>
 																				<YPos>0</YPos>
 																				<Flags>37</Flags>
 																			</Point>
@@ -718,7 +716,7 @@
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
-																				<XPos>22.5</XPos>
+																				<XPos>23.5</XPos>
 																				<YPos>0</YPos>
 																				<Flags>37</Flags>
 																			</Point>
@@ -814,7 +812,7 @@
 							<ChildrenList>
 								<MusicSegment Name="Pizz Violins" ID="{E17E363B-533E-4925-9F11-BA00B990F258}" ShortID="150527884">
 									<PropertyList>
-										<Property Name="EndPosition" Type="Real64" Value="30500"/>
+										<Property Name="EndPosition" Type="Real64" Value="31000"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -850,9 +848,8 @@
 													<ClipList>
 														<MusicClip Name="Pizz Violins" ID="{3C79278E-84B6-4BC4-9AD6-A1B8D034209E}">
 															<PropertyList>
-																<Property Name="EndTrimOffset" Type="Real64" Value="28500"/>
+																<Property Name="EndTrimOffset" Type="Real64" Value="30000"/>
 																<Property Name="FadeInMode" Type="int16" Value="0"/>
-																<Property Name="FadeOutDuration" Type="Real64" Value="523.076923076918"/>
 															</PropertyList>
 															<AudioSourceRef Name="Pizz Violins" ID="{AE5FD17A-E850-4E21-9FBB-C8E04FB7D84B}"/>
 															<PropertyCurveList>
@@ -868,7 +865,7 @@
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
-																				<XPos>28.5</XPos>
+																				<XPos>30</XPos>
 																				<YPos>0</YPos>
 																				<Flags>37</Flags>
 																			</Point>
@@ -887,7 +884,7 @@
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
-																				<XPos>28.5</XPos>
+																				<XPos>30</XPos>
 																				<YPos>0</YPos>
 																				<Flags>37</Flags>
 																			</Point>
@@ -906,7 +903,7 @@
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
-																				<XPos>28.5</XPos>
+																				<XPos>30</XPos>
 																				<YPos>0</YPos>
 																				<Flags>37</Flags>
 																			</Point>
@@ -1190,7 +1187,7 @@
 							<ChildrenList>
 								<MusicSegment Name="Violin Scrubs" ID="{34E11B14-A43E-4CE4-95AD-6E3AA4DCA17F}" ShortID="924504637">
 									<PropertyList>
-										<Property Name="EndPosition" Type="Real64" Value="24000"/>
+										<Property Name="EndPosition" Type="Real64" Value="24500"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -1226,9 +1223,7 @@
 													<ClipList>
 														<MusicClip Name="Violin Scrubs" ID="{7896C70A-3888-406C-AA57-F20371D52C85}">
 															<PropertyList>
-																<Property Name="EndTrimOffset" Type="Real64" Value="22500"/>
-																<Property Name="FadeInMode" Type="int16" Value="0"/>
-																<Property Name="FadeOutDuration" Type="Real64" Value="516.923076923074"/>
+																<Property Name="EndTrimOffset" Type="Real64" Value="24000"/>
 															</PropertyList>
 															<AudioSourceRef Name="Violin Scrubs" ID="{4DC50412-1EBC-4613-927E-9C2B64510669}"/>
 															<PropertyCurveList>
@@ -1244,7 +1239,7 @@
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
-																				<XPos>22.5</XPos>
+																				<XPos>24</XPos>
 																				<YPos>0</YPos>
 																				<Flags>37</Flags>
 																			</Point>
@@ -1263,7 +1258,7 @@
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
-																				<XPos>22.5</XPos>
+																				<XPos>24</XPos>
 																				<YPos>0</YPos>
 																				<Flags>37</Flags>
 																			</Point>
@@ -1282,7 +1277,7 @@
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
-																				<XPos>22.5</XPos>
+																				<XPos>24</XPos>
 																				<YPos>0</YPos>
 																				<Flags>37</Flags>
 																			</Point>
@@ -1500,10 +1495,8 @@
 									<PropertyList>
 										<Property Name="IsFolder" Type="bool" Value="True"/>
 									</PropertyList>
-									<ReferenceList/>
 									<ChildrenList>
 										<MusicTransition Name="Transition" ID="{2B3365AA-A366-4153-8F95-791AFDF2F862}">
-											<ReferenceList/>
 											<TransitionInfo/>
 										</MusicTransition>
 									</ChildrenList>
