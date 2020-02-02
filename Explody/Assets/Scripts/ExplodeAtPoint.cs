@@ -1,4 +1,6 @@
 ﻿using System.Linq;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ExplodeAtPoint : MonoBehaviour
@@ -20,6 +22,14 @@ public class ExplodeAtPoint : MonoBehaviour
 		ExplosionForce = ExplosionForce == null ? GetComponent <ExplosionForce> () : ExplosionForce;
 	}
 
+	private void Update()
+	{
+		if(Input.GetKeyDown(KeyCode.E))
+		{
+			ExplodeAtThisPoint();
+		}
+	}
+
 	public void Explode ( Vector3 Position , float Radius = 0.1f )
 	{
 		var Colliders = Physics2D.OverlapCircleAll ( Position , Radius );
@@ -33,11 +43,28 @@ public class ExplodeAtPoint : MonoBehaviour
 			Explodable.explode ();
 		}
 		ExplosionForce.doExplosion ( Position );
+		GameObject.FindGameObjectWithTag("TimeSlow").GetComponent<TimeSlow>().StartSlowDown();
+		StartCoroutine(SetSnappables());
 	}
 
 	public void ExplodeAtMousePosition ()
 	{
 		Explode ( Camera.ScreenToWorldPoint ( Input.mousePosition ) );
+	}
+
+	public void ExplodeAtThisPoint()
+	{
+		Explode(transform.position);
+	}
+
+	IEnumerator SetSnappables()
+	{
+		yield return new WaitForSeconds(.5f);
+		GameObject[] Pieces = GameObject.FindGameObjectsWithTag("Piece");
+		foreach (GameObject obj in Pieces)
+		{
+			obj.GetComponent<SnapToLocation>().StartTracking();
+		}
 	}
 
 }

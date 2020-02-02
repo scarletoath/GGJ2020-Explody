@@ -19,6 +19,8 @@ public class Explodable : MonoBehaviour
     public string sortingLayerName = "Default";
     public int orderInLayer = 0;
 
+    public GameObject LockedInAchievedPreFab;
+
     public enum ShatterType
     {
         Triangle,
@@ -38,7 +40,7 @@ public class Explodable : MonoBehaviour
         //if fragments were not created before runtime then create them now
         if (fragments.Count == 0 && allowRuntimeFragmentation)
         {
-            generateFragments(true);
+            generateFragments();
 			foreach ( GameObject frag in fragments )
 			{
 				frag.transform.parent = transform;
@@ -69,7 +71,7 @@ public class Explodable : MonoBehaviour
 		if (fragments.Count > 0)
         {
             var renderer = gameObject.GetComponent<SpriteRenderer>();
-            var colider = gameObject.GetComponent<Collider2D>();
+            var colider = gameObject.GetComponent<BoxCollider2D>();
 
 			renderer.enabled = false;
 			colider.enabled = false;
@@ -84,8 +86,13 @@ public class Explodable : MonoBehaviour
         {
             deleteFragments();
         }
-        generateFragments(false);
+        generateFragments();
         setPolygonsForDrawing();
+        foreach (GameObject frag in fragments)
+        {
+            frag.transform.parent = transform;
+            frag.SetActive(false);
+        }
     }
     public void deleteFragments()
     {
@@ -123,7 +130,7 @@ public class Explodable : MonoBehaviour
 	private void resetSingle ()
 	{
 		var renderer = gameObject.GetComponent<SpriteRenderer> ();
-		var colider = gameObject.GetComponent<Collider2D> ();
+		var colider = gameObject.GetComponent<BoxCollider2D> ();
 
 		renderer.enabled = true;
 		colider.enabled = true;
@@ -135,20 +142,26 @@ public class Explodable : MonoBehaviour
         {
             deleteFragments();
         }
-        generateFragments(false, true);
+        generateFragments(true);
         setPolygonsForDrawing();
+
+        foreach (GameObject frag in fragments)
+        {
+            frag.transform.parent = transform;
+            frag.SetActive(false);
+        }
     }
 
     /// <summary>
     /// Turns Gameobject into multiple fragments
     /// </summary>
-    private void generateFragments(bool isActive, bool meshSaved = false)
+    private void generateFragments(bool meshSaved = false)
     {
 #if UNITY_EDITOR
 		string savePath = null;
 		if ( meshSaved )
 		{
-			savePath = EditorUtility.SaveFolderPanel ( "Save fracture pieces" , "Assets" , "" );
+			savePath = EditorUtility.SaveFolderPanel ( "Save fracture pieces" , "Assets/Mesh" , "" );
 			if ( !string.IsNullOrEmpty ( savePath ) )
 			{
 				savePath = savePath.Substring ( savePath.IndexOf ( "Assets/" , StringComparison.OrdinalIgnoreCase ) );
@@ -182,16 +195,17 @@ public class Explodable : MonoBehaviour
 		{
 			if (fragment != null)
 			{
-				fragment.transform.SetParent ( transform );
-				if ( fragment.activeSelf != isActive )
-					fragment.SetActive ( isActive );
-
 				fragment.layer                                     = LayerMask.NameToLayer(fragmentLayer);
-				fragment.name += $"_{fragment.transform.GetSiblingIndex () + 1}";
 				fragment.GetComponent<Renderer>().sortingLayerName = sortingLayerName;
 				fragment.GetComponent<Renderer>().sortingOrder     = orderInLayer;
 				fragment.GetComponent <Rigidbody2D> ().gravityScale = fragmentGravity;
-				fragmentTxs.Add ( ( fragment.transform.localPosition , fragment.transform.localRotation ) );
+                fragment.tag = "Piece";
+                fragment.AddComponent<SnapToLocation>();
+                fragment.GetComponent<SnapToLocation>().SetTolerance(0.5f);
+                GameObject lockedIn = Instantiate(LockedInAchievedPreFab, fragment.transform);
+                lockedIn.transform.position = fragment.transform.position;
+                fragment.GetComponent<SnapToLocation>().lockedInAchieved = lockedIn.GetComponent<ParticleSystem>();
+                fragmentTxs.Add ( ( fragment.transform.localPosition , fragment.transform.localRotation ) );
 			}
 		}
 
@@ -199,10 +213,7 @@ public class Explodable : MonoBehaviour
 		if ( meshSaved )
 		{
 			foreach ( var mesh in fragments.Select ( f => f.GetComponent <MeshFilter> () ) )
-			{
-				string filePath = savePath + '/' + mesh.transform.name + ".asset";
-				AssetDatabase.CreateAsset ( mesh.sharedMesh , filePath );
-			}
+				AssetDatabase.CreateAsset ( mesh , savePath + '/' + transform.name + "_" + mesh.transform.GetSiblingIndex () + ".asset" );
 			AssetDatabase.SaveAssets ();
 		}
 #endif

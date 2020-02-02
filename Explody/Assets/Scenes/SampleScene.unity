@@ -1649,6 +1649,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 1
+  maxHoldTime: 0.02
 --- !u!1 &1262215187
 GameObject:
   m_ObjectHideFlags: 0
