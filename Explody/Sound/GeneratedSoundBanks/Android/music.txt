@@ -1,6 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	127433965	timeSlow			\Default Work Unit\timeSlow	
-	417627684	playMusic			\Default Work Unit\playMusic	
+	182906760	playExplosion			\Default Work Unit\playExplosion	
 	3086540886	stopAll			\Default Work Unit\stopAll	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
