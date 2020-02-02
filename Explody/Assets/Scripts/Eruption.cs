@@ -32,6 +32,7 @@ public class Eruption : MonoBehaviour
             obj.GetComponent<Rigidbody2D>().AddForce(force);
         }
         StartCoroutine(SetSnappables());
+        GameObject.FindGameObjectWithTag("TimeSlow").GetComponent<TimeSlow>().StartSlowDown();
     }
 
     IEnumerator SetSnappables()
