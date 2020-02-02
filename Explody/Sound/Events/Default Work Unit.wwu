@@ -5,10 +5,128 @@
 			<ChildrenList>
 				<Event Name="playExplosion" ID="{84390155-E2DE-41DE-B557-6505A775A609}">
 					<ChildrenList>
+						<Action Name="" ID="{D5354E4C-4883-4503-BA9D-FB6842C5BCE4}" ShortID="260021447">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ambience" ID="{81A23B5B-FBCF-424A-B263-805CBF54C8AC}" WorkUnitID="{84B482EF-7721-497E-9BD7-C0DD224B323B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{EA742AD3-6241-4A9E-8FC9-B49E42C322A1}" ShortID="288927861">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="timeSlowViolinScrubs" ID="{AAA27BFD-8A7C-4F3A-9D09-2982ADD088E2}" WorkUnitID="{01C8367F-4B90-4007-96F1-66D72827462E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{D36C5599-7179-4C1F-B2F6-93292043E428}" ShortID="590288745">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="timeSlowArpesque" ID="{FBBE8CBF-0AE3-4FE4-8E9C-EFABFEDCE6A5}" WorkUnitID="{01C8367F-4B90-4007-96F1-66D72827462E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{7C3E8AC6-27E7-4275-A2F5-69A0DC48595A}" ShortID="326308184">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="timeSlowCello" ID="{A42F1478-3A5E-4D9B-8C51-77C2BCBA0AD1}" WorkUnitID="{01C8367F-4B90-4007-96F1-66D72827462E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{ACD1E25D-D54B-440D-A34A-E67E1388B89E}" ShortID="449016209">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="timeSlowBass" ID="{1E95FBEE-725D-4ECC-B22B-8DE9DC9AC7CA}" WorkUnitID="{01C8367F-4B90-4007-96F1-66D72827462E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{3F7A287C-AD90-448E-BA26-1225458F4E5A}" ShortID="536326659">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="timeSlowPizzViolins" ID="{1222AC32-18BF-48A7-B5E0-36CEEE61A95F}" WorkUnitID="{01C8367F-4B90-4007-96F1-66D72827462E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{774EA325-AFE0-4760-BFF5-388E356BF405}" ShortID="137144352">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="timeSlowMangledCello" ID="{6AD861F0-1BBA-46F4-A0B6-68431C6F2C72}" WorkUnitID="{01C8367F-4B90-4007-96F1-66D72827462E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{5EA8A1E6-5869-49C4-A495-C00E5FF129D9}" ShortID="427156118">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="timeSlowViola" ID="{E880B5A0-2997-4F8E-B011-668A3A1300BB}" WorkUnitID="{01C8367F-4B90-4007-96F1-66D72827462E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{756BC530-383F-41D7-BA41-7C28237DFEF0}" ShortID="206598800">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="timeSlowViolinSwells" ID="{DE83EC75-19C4-4F0A-AAF7-A9E3429575BD}" WorkUnitID="{01C8367F-4B90-4007-96F1-66D72827462E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{4E7206DF-FED3-404C-AB3B-49E1B8B857E1}" ShortID="590195852">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="1"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="timeSlow" ID="{2A4A09F0-BC6E-404B-BD25-7377E0788C5C}" WorkUnitID="{01C8367F-4B90-4007-96F1-66D72827462E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{7C74568D-2DA7-4FD3-9A97-4B6EFD36C723}" ShortID="601202922">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="explosion" ID="{A745C34F-3C4C-497F-B870-D8E0F71B0767}" WorkUnitID="{84B482EF-7721-497E-9BD7-C0DD224B323B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 						<Action Name="" ID="{9CF32C9C-EB94-4244-BC1B-B5CB85F6613E}" ShortID="727642469">
 							<PropertyList>
 								<Property Name="FadeInCurve" Type="int16" Value="7"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -19,7 +137,7 @@
 						<Action Name="" ID="{11896419-FC29-402C-89CF-C1D84847A1EF}" ShortID="328016573">
 							<PropertyList>
 								<Property Name="FadeInCurve" Type="int16" Value="7"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -30,7 +148,7 @@
 						<Action Name="" ID="{16F57E1A-1EAB-404E-9B18-96880BAE752F}" ShortID="1032803081">
 							<PropertyList>
 								<Property Name="FadeInCurve" Type="int16" Value="7"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -41,7 +159,7 @@
 						<Action Name="" ID="{1199F669-7DE9-4AC2-BFF0-A504F31790E1}" ShortID="250899752">
 							<PropertyList>
 								<Property Name="FadeInCurve" Type="int16" Value="7"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -52,7 +170,7 @@
 						<Action Name="" ID="{C6A3C18C-FDD9-4D12-BE30-240039278E1E}" ShortID="808066490">
 							<PropertyList>
 								<Property Name="FadeInCurve" Type="int16" Value="7"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -63,7 +181,7 @@
 						<Action Name="" ID="{3926849A-1172-455F-BE2E-A2FD826F50E3}" ShortID="1018185187">
 							<PropertyList>
 								<Property Name="FadeInCurve" Type="int16" Value="7"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -74,7 +192,7 @@
 						<Action Name="" ID="{63A9D60E-1431-4EFD-B711-7581BFE23519}" ShortID="530713430">
 							<PropertyList>
 								<Property Name="FadeInCurve" Type="int16" Value="7"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -85,7 +203,7 @@
 						<Action Name="" ID="{B30B6485-688C-43E0-83D8-3833CB931921}" ShortID="992030119">
 							<PropertyList>
 								<Property Name="FadeInCurve" Type="int16" Value="7"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -101,6 +219,7 @@
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="38"/>
 								<Property Name="GameParameterValue" Type="Real64" Value="1"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -112,6 +231,7 @@
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="38"/>
 								<Property Name="GameParameterValue" Type="Real64" Value="1"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -123,6 +243,7 @@
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="38"/>
 								<Property Name="GameParameterValue" Type="Real64" Value="1"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -134,6 +255,7 @@
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="38"/>
 								<Property Name="GameParameterValue" Type="Real64" Value="1"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -145,6 +267,7 @@
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="38"/>
 								<Property Name="GameParameterValue" Type="Real64" Value="1"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -156,6 +279,7 @@
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="38"/>
 								<Property Name="GameParameterValue" Type="Real64" Value="1"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -167,6 +291,7 @@
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="38"/>
 								<Property Name="GameParameterValue" Type="Real64" Value="1"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -178,6 +303,7 @@
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="38"/>
 								<Property Name="GameParameterValue" Type="Real64" Value="1"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -195,6 +321,228 @@
 								<Property Name="FadeTime" Type="Real64" Value="2"/>
 							</PropertyList>
 							<ReferenceList/>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="clickShardArp" ID="{4CC375B5-2120-4DD6-AE60-BFCB834C33BB}">
+					<ChildrenList>
+						<Action Name="" ID="{3CC6E2D2-0588-434E-B038-CE60B37D91F4}" ShortID="1005332752">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="timeSlowArpesque" ID="{FBBE8CBF-0AE3-4FE4-8E9C-EFABFEDCE6A5}" WorkUnitID="{01C8367F-4B90-4007-96F1-66D72827462E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="playAmb" ID="{B2046068-FA5D-4835-A72F-D00D24D94273}">
+					<ChildrenList>
+						<Action Name="" ID="{42D6EBEC-46AB-4D83-B5EF-E8256F3A98F1}" ShortID="478872763">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ambience" ID="{81A23B5B-FBCF-424A-B263-805CBF54C8AC}" WorkUnitID="{84B482EF-7721-497E-9BD7-C0DD224B323B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="clickShardBass" ID="{F3975446-A355-42B0-A44C-682A81EC94A1}">
+					<ChildrenList>
+						<Action Name="" ID="{5C48F2E2-3E3D-48A2-BCB4-3EDA602DB3E9}" ShortID="608534240">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="timeSlowBass" ID="{1E95FBEE-725D-4ECC-B22B-8DE9DC9AC7CA}" WorkUnitID="{01C8367F-4B90-4007-96F1-66D72827462E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="clickShardCello" ID="{AA8B4DCE-2965-45E7-87E2-6CBCEBD9956B}">
+					<ChildrenList>
+						<Action Name="" ID="{8DE04B72-55C4-4E3F-85A2-164D8A1CDBB3}" ShortID="40209928">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="timeSlowCello" ID="{A42F1478-3A5E-4D9B-8C51-77C2BCBA0AD1}" WorkUnitID="{01C8367F-4B90-4007-96F1-66D72827462E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="clickShardMangled" ID="{1D76F857-6F3E-4B4C-B032-8D3A0E7968CC}">
+					<ChildrenList>
+						<Action Name="" ID="{1AD6AE91-25E2-4E68-8FA5-B115ECCA190B}" ShortID="710776393">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="timeSlowMangledCello" ID="{6AD861F0-1BBA-46F4-A0B6-68431C6F2C72}" WorkUnitID="{01C8367F-4B90-4007-96F1-66D72827462E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="clickShardPizz" ID="{C156D445-EF7A-4027-8E22-48B0D190A444}">
+					<ChildrenList>
+						<Action Name="" ID="{A87F260A-6CFC-49E5-865D-0F1EE8C264E1}" ShortID="60545816">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="timeSlowPizzViolins" ID="{1222AC32-18BF-48A7-B5E0-36CEEE61A95F}" WorkUnitID="{01C8367F-4B90-4007-96F1-66D72827462E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="clickShardViola" ID="{D8D38A57-A540-4F2F-8CCB-0635DBF215F3}">
+					<ChildrenList>
+						<Action Name="" ID="{CFA3594C-0431-4BA1-9073-EBE781B56664}" ShortID="321659978">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="timeSlowViola" ID="{E880B5A0-2997-4F8E-B011-668A3A1300BB}" WorkUnitID="{01C8367F-4B90-4007-96F1-66D72827462E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="clickShardScrubs" ID="{852AFB74-E876-4EBE-87B0-F1CACCFFCD9D}">
+					<ChildrenList>
+						<Action Name="" ID="{43D9FA9A-7671-4567-BD11-52292FF78EC9}" ShortID="1037362788">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="timeSlowViolinScrubs" ID="{AAA27BFD-8A7C-4F3A-9D09-2982ADD088E2}" WorkUnitID="{01C8367F-4B90-4007-96F1-66D72827462E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="clickShardSwells" ID="{7C406FA2-124B-49F5-8908-279CCEB0A904}">
+					<ChildrenList>
+						<Action Name="" ID="{5013E7DA-F9D3-409A-847B-AE9EFA0D7986}" ShortID="816493430">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="timeSlowViolinSwells" ID="{DE83EC75-19C4-4F0A-AAF7-A9E3429575BD}" WorkUnitID="{01C8367F-4B90-4007-96F1-66D72827462E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="endLevel" ID="{B7B994F0-A318-4030-BF37-74A31AC31750}">
+					<ChildrenList>
+						<Action Name="" ID="{DC9DBFC8-A5E6-4149-AA27-0FB640381041}" ShortID="540529496">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ambience" ID="{81A23B5B-FBCF-424A-B263-805CBF54C8AC}" WorkUnitID="{84B482EF-7721-497E-9BD7-C0DD224B323B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{C1E30A56-042A-4861-B816-527356661A58}" ShortID="47080149">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="arpesque" ID="{3AEF585E-E029-47FA-A8DB-0DFF9273FD79}" WorkUnitID="{59F0D7F4-7392-49A1-8D95-D85316ECBB79}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{2B14C9F9-648F-4F67-8AC4-86D0845DF893}" ShortID="1030703020">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="bass" ID="{FA5488B7-C185-440D-8589-9FC3E69BEBB1}" WorkUnitID="{59F0D7F4-7392-49A1-8D95-D85316ECBB79}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{BB095AE4-E85D-4BC2-88F0-0B46113DE88A}" ShortID="439945166">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="cello" ID="{2C940ADA-2CD7-4616-A75C-CE7A4597C35C}" WorkUnitID="{59F0D7F4-7392-49A1-8D95-D85316ECBB79}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{33B109D8-AABB-4E13-8757-2B6F67E999E7}" ShortID="889707790">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="mangled_cello" ID="{19A9CD84-0F23-4C41-8B93-5726CCC7063E}" WorkUnitID="{59F0D7F4-7392-49A1-8D95-D85316ECBB79}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{5662C571-6D6C-4BA9-986C-4E5C13A1956A}" ShortID="958032432">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="pizz_violins" ID="{EBBE1ED4-2FB8-446C-8D83-2908C55662A1}" WorkUnitID="{59F0D7F4-7392-49A1-8D95-D85316ECBB79}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{204CACBC-48B1-414A-BEDA-9073051E0AAE}" ShortID="975928869">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="viola" ID="{935E59E8-1C6C-400C-B185-CA0B123094FD}" WorkUnitID="{59F0D7F4-7392-49A1-8D95-D85316ECBB79}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{F82F4427-1689-4147-AA2F-C927616F1577}" ShortID="703129952">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="violin_scrubs" ID="{02D1BD64-830F-4927-AD63-408D4B9A5AF0}" WorkUnitID="{59F0D7F4-7392-49A1-8D95-D85316ECBB79}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{19C639E0-1245-4CBA-AB3B-D497D731CEED}" ShortID="588631749">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="violin_swells" ID="{739A4A1C-9DDB-4748-B005-58BA21DC8A7D}" WorkUnitID="{59F0D7F4-7392-49A1-8D95-D85316ECBB79}"/>
+								</Reference>
+							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>

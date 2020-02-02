@@ -1,7 +1,14 @@
 Event	ID	Name			Wwise Object Path	Notes
 	127433965	timeSlow			\Default Work Unit\timeSlow	
 	182906760	playExplosion			\Default Work Unit\playExplosion	
-	3086540886	stopAll			\Default Work Unit\stopAll	
+	596780413	clickShardScrubs			\Default Work Unit\clickShardScrubs	
+	1808369568	clickShardArp			\Default Work Unit\clickShardArp	
+	2673103409	clickShardMangled			\Default Work Unit\clickShardMangled	
+	3141704500	clickShardCello			\Default Work Unit\clickShardCello	
+	4065971336	clickShardBass			\Default Work Unit\clickShardBass	
+	4093498252	clickShardViola			\Default Work Unit\clickShardViola	
+	4098476599	clickShardSwells			\Default Work Unit\clickShardSwells	
+	4241405248	clickShardPizz			\Default Work Unit\clickShardPizz	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	849161288	timeSlowBass			\Default Work Unit\timeSlowBass	
