@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="iOS" BasePlatform="iOS" SchemaVersion="11" SoundbankVersion="134">
+	<RootPaths>
+		<ProjectRoot>/Users/ethankampa/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Studio 5-27A/ExternalProjects/GGJ-2020/PLODE/Explody/Sound/</ProjectRoot>
+		<SourceFilesRoot>/Users/ethankampa/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Studio 5-27A/ExternalProjects/GGJ-2020/PLODE/Explody/Sound/.cache/iOS/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/ethankampa/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Studio 5-27A/ExternalProjects/GGJ-2020/PLODE/Explody/Assets/StreamingAssets/Audio/GeneratedSoundBanks/iOS/</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>/Users/ethankampa/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Studio 5-27A/ExternalProjects/GGJ-2020/PLODE/Explody/Sound/GeneratedSoundBanks/iOS</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="393239870" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\sfx</ObjectPath>
+			<ShortName>sfx</ShortName>
+			<Path>sfx.bnk</Path>
+			<IncludedEvents>
+				<Event Id="1054659462" Name="endLevel" ObjectPath="\Events\Default Work Unit\endLevel" DurationType="Infinite"/>
+				<Event Id="1837310473" Name="playAmb" ObjectPath="\Events\Default Work Unit\playAmb" DurationType="Infinite"/>
+				<Event Id="3086540886" Name="stopAll" ObjectPath="\Events\Default Work Unit\stopAll" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="202910255" Language="SFX">
+					<ShortName>Winds-DesertWind-Ext-VerySt.wav</ShortName>
+					<Path>SFX/Winds-DesertWind-Ext-VerySt_C9A636D4.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3991942870" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\music</ObjectPath>
+			<ShortName>music</ShortName>
+			<Path>music.bnk</Path>
+			<IncludedEvents>
+				<Event Id="1808369568" Name="clickShardArp" ObjectPath="\Events\Default Work Unit\clickShardArp" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="4065971336" Name="clickShardBass" ObjectPath="\Events\Default Work Unit\clickShardBass" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3141704500" Name="clickShardCello" ObjectPath="\Events\Default Work Unit\clickShardCello" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2673103409" Name="clickShardMangled" ObjectPath="\Events\Default Work Unit\clickShardMangled" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="4241405248" Name="clickShardPizz" ObjectPath="\Events\Default Work Unit\clickShardPizz" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="596780413" Name="clickShardScrubs" ObjectPath="\Events\Default Work Unit\clickShardScrubs" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="4098476599" Name="clickShardSwells" ObjectPath="\Events\Default Work Unit\clickShardSwells" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="4093498252" Name="clickShardViola" ObjectPath="\Events\Default Work Unit\clickShardViola" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="182906760" Name="playExplosion" ObjectPath="\Events\Default Work Unit\playExplosion" DurationType="Infinite"/>
+				<Event Id="127433965" Name="timeSlow" ObjectPath="\Events\Default Work Unit\timeSlow" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="139739996" Language="SFX">
+					<ShortName>Cello.wav</ShortName>
+					<Path>SFX/Cello_F65F12A8.wem</Path>
+				</File>
+				<File Id="245964681" Language="SFX">
+					<ShortName>Bass.wav</ShortName>
+					<Path>SFX/Bass_F65F12A8.wem</Path>
+				</File>
+				<File Id="377995973" Language="SFX">
+					<ShortName>Viola.wav</ShortName>
+					<Path>SFX/Viola_F65F12A8.wem</Path>
+				</File>
+				<File Id="516908577" Language="SFX">
+					<ShortName>Weapons-FlashBangGrenade-Me.wav</ShortName>
+					<Path>SFX/Weapons-FlashBangGrenade-Me_5A6CA11D.wem</Path>
+				</File>
+				<File Id="648564176" Language="SFX">
+					<ShortName>Mangled Cello.wav</ShortName>
+					<Path>SFX/Mangled Cello_F65F12A8.wem</Path>
+				</File>
+				<File Id="657020099" Language="SFX">
+					<ShortName>Pizz Violins.wav</ShortName>
+					<Path>SFX/Pizz Violins_F65F12A8.wem</Path>
+				</File>
+				<File Id="673673290" Language="SFX">
+					<ShortName>Violin Scrubs.wav</ShortName>
+					<Path>SFX/Violin Scrubs_F65F12A8.wem</Path>
+				</File>
+				<File Id="918818940" Language="SFX">
+					<ShortName>Violin Swells.wav</ShortName>
+					<Path>SFX/Violin Swells_F65F12A8.wem</Path>
+				</File>
+				<File Id="991299546" Language="SFX">
+					<ShortName>Arpesque.wav</ShortName>
+					<Path>SFX/Arpesque_F65F12A8.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
