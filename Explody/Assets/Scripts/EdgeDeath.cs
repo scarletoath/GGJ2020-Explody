@@ -22,7 +22,7 @@ public class EdgeDeath : MonoBehaviour
 		{
 			Debug.Log ( $"destroy {col}" );
 			GameController.Instance.UnregisterSnap ( col.GetComponent <SnapToLocation> () );
-            Destroy(col.gameObject);
+            col.gameObject.SetActive( false );
         }
     }
 

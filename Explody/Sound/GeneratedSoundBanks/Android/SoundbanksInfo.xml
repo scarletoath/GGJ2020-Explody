@@ -26,7 +26,7 @@
 			<ShortName>music</ShortName>
 			<Path>music.bnk</Path>
 			<IncludedEvents>
-				<Event Id="417627684" Name="playMusic" ObjectPath="\Events\Default Work Unit\playMusic" DurationType="Infinite"/>
+				<Event Id="182906760" Name="playExplosion" ObjectPath="\Events\Default Work Unit\playExplosion" DurationType="Infinite"/>
 				<Event Id="3086540886" Name="stopAll" ObjectPath="\Events\Default Work Unit\stopAll" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="127433965" Name="timeSlow" ObjectPath="\Events\Default Work Unit\timeSlow" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>

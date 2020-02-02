@@ -232,6 +232,10 @@ public class GameController : MonoBehaviour
         Debug.Log( "GameController::OnStartNextLevel() Called." );
         Exploder.ExplodeAtThisPoint ();
 		TimeSlow.StartSlowDown ();
+
+        GameObject[] pieces = GameObject.FindGameObjectsWithTag( "Piece" );
+
+        playbackManager.ResetPlayback( pieces );
         playbackManager.StartRecording();
 
 		bStarted = true;
@@ -244,15 +248,23 @@ public class GameController : MonoBehaviour
         Debug.Log( "GameController::OnComplete() Called." );
 		TimeSlow.StopSlowDown ();
 		playbackManager.Wait();
-		StarRating.gameObject.SetActive ( true );
+        StarRating.gameObject.SetActive ( true );
 		StarRating.SetRating ( Random.Range ( 0.29f , 1 ) , true ); // TODO : Get score in percent
 		ScoreDisplay.ShowScore ( scoreTally.LastScore );
-        //bReadyForReplay = true;
-		bStarted = false;
-		bReadyForGameplay = true;
+        bReadyForReplay = true;
+        StartCoroutine( TriggerPlayback() );
+        bStarted = false;
 	}
 
-	public void OnStartPlayback()
+    System.Collections.IEnumerator TriggerPlayback()
+    {
+        if ( bReadyForReplay ) {
+            yield return new WaitForSeconds( .5f );
+            playbackManager.StartPlayback();
+        }
+    }
+
+    public void OnStartPlayback()
     {
         // Triggered shortly after OnComplete (x seconds? or just when the player triggeres it manually?)
         // Trigger the playback manager to play back the recording.

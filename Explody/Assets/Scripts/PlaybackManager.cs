@@ -8,9 +8,11 @@ public class PlaybackManager : MonoBehaviour
     {
         public Vector3 pos;
         public Quaternion rot;
+        public bool bActive;
     }
 
-    enum RecordingState {
+    enum RecordingState
+    {
         WAIT,
         RECORD,
         REPLAY
@@ -24,26 +26,30 @@ public class PlaybackManager : MonoBehaviour
     private ulong frame;
 
     private GameObject[] pieces;
-    private Dictionary<GameObject, List<PieceData> > recordings = new Dictionary<GameObject, List<PieceData>>();
+    private Dictionary<GameObject, List<PieceData>> recordings;
 
-    private int maxRecordings = 150;
+    private ulong framesPerSample;
+    private int maxRecordings = 500;
     private int totalRecordings = 0;
     private int currentReplayStep = 1;
-    private float lerpVal = 0;
+    private float lerpVal = 0f;
 
     // Start is called before the first frame update
     void Start()
     {
+        framesPerSample = 60 / samplesPerSec;
+    }
+
+    public void ResetPlayback( GameObject[] newPieces )
+    {
+        totalRecordings = 0;
+        currentReplayStep = 1;
         frame = 0;
-        if ( pieces == null )
-        {
-            pieces = GameObject.FindGameObjectsWithTag( pieceTag );
-        }
-
-        samplesPerSec = 60 / samplesPerSec;
-
-        foreach( GameObject piece in pieces )
-        {
+        lerpVal = 0f;
+        state = RecordingState.WAIT;
+        recordings = new Dictionary<GameObject, List<PieceData>>();
+        pieces = newPieces;
+        foreach ( GameObject piece in pieces ) {
             recordings.Add( piece, new List<PieceData>( maxRecordings ) );
         }
     }
@@ -51,43 +57,47 @@ public class PlaybackManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch( state )
-        {
-            case RecordingState.RECORD:
-                {
-                    if ( frame % samplesPerSec == 0 ) {
+        switch ( state ) {
+            case RecordingState.RECORD: {
+                    if ( frame % framesPerSample == 0 ) {
                         foreach ( GameObject piece in pieces ) {
-                            recordings[piece].Add( new PieceData {
+                            recordings[ piece ].Add( new PieceData {
                                 pos = piece.transform.position,
-                                rot = piece.transform.rotation
+                                rot = piece.transform.rotation,
+                                bActive = piece.activeSelf
                             } );
                         }
                         totalRecordings++;
                     }
                 }
                 break;
-            case RecordingState.REPLAY:
-                {
-                    if ( lerpVal > 1 ) {
-                        lerpVal = 0f;
-                        currentReplayStep++;
-                    }
+            case RecordingState.REPLAY: {
                     if ( currentReplayStep >= totalRecordings ) {
                         Debug.Log( "Replay is done." );
                         state = RecordingState.WAIT;
                         break;
                     }
 
-                    foreach ( KeyValuePair< GameObject, List< PieceData > > entry in recordings ) {
+                    foreach ( KeyValuePair<GameObject, List<PieceData>> entry in recordings ) {
                         GameObject piece = entry.Key;
                         PieceData curEntry = entry.Value[ currentReplayStep ];
                         PieceData prevEntry = entry.Value[ currentReplayStep - 1 ];
 
+                        if ( !prevEntry.bActive ) {
+                            piece.SetActive( false );
+                            continue;
+                        }
+
                         piece.transform.position = Vector3.Lerp( prevEntry.pos, curEntry.pos, lerpVal );
                         piece.transform.rotation = Quaternion.Lerp( prevEntry.rot, curEntry.rot, lerpVal );
                     }
-
-                    lerpVal += Time.deltaTime * playbackSpeed;
+                    float nextLerpVal = lerpVal + Time.deltaTime * playbackSpeed;
+                    if ( lerpVal < 1 ) {
+                        lerpVal = Mathf.Min( nextLerpVal, 1.0f );
+                    } else {
+                        lerpVal = 0f;
+                        currentReplayStep++;
+                    }
                 }
                 break;
             case RecordingState.WAIT:
@@ -106,11 +116,31 @@ public class PlaybackManager : MonoBehaviour
 
     public void Wait()
     {
+        if ( state == RecordingState.RECORD ) {
+            // Need to add one final recording point for the end of the level.
+            foreach ( GameObject piece in pieces ) {
+                recordings[ piece ].Add( new PieceData {
+                    pos = piece.transform.position,
+                    rot = piece.transform.rotation,
+                    bActive = piece.activeSelf
+                } );
+            }
+            totalRecordings++;
+        }
         state = RecordingState.WAIT;
     }
 
     public void StartPlayback()
     {
+        foreach ( KeyValuePair<GameObject, List<PieceData>> entry in recordings ) {
+            GameObject piece = entry.Key;
+            PieceData curEntry = entry.Value[ 0 ];
+
+            piece.transform.position = curEntry.pos;
+            piece.transform.rotation = curEntry.rot;
+            piece.SetActive( true );
+            //piece.GetComponent<Renderer>().enabled = !GetComponent<Renderer>().enabled;
+        }
         state = RecordingState.REPLAY;
         frame = 0;
     }

@@ -5,6 +5,8 @@ using UnityEngine;
 public class DragInput : MonoBehaviour
 {
 
+    GameObject hoveredObject;
+
     GameObject draggedObject;
     Vector3 dragOffset;
 
@@ -58,6 +60,18 @@ public class DragInput : MonoBehaviour
             }
         }
 
+        HandleHover();
+
+        if (hoveredObject != null && draggedObject == null)
+        {
+            if (rotationValue != 0)
+            {
+                Vector3 prevRot = hoveredObject.transform.rotation.eulerAngles;
+                prevRot.z += rotationValue * rotationSpeed;
+                hoveredObject.transform.rotation = Quaternion.Euler(prevRot);
+                rotationValue = 0;
+            }
+        }
     }
 
     public void HandleGrab(bool down)
@@ -92,7 +106,25 @@ public class DragInput : MonoBehaviour
         }
     }
 
-    public void HandleRotation(float rotationVal)
+    public void HandleHover()
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity);
+        if (hit)
+        {
+            if (hit.transform.CompareTag("Piece") && !hit.transform.gameObject.GetComponent<SnapToLocation>().GetPositionIsFixed()) // subject to change
+            {
+                hoveredObject =  hit.transform.gameObject;
+            }
+        }
+        else if ( hoveredObject != null )
+        {
+            hoveredObject = null;
+
+        }
+    }
+
+public void HandleRotation(float rotationVal)
     {
         rotationValue = rotationVal;
     }

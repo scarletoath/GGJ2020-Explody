@@ -3,7 +3,7 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{77E68E32-1EC0-4CD8-BABB-69542BCBAEEF}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="playMusic" ID="{84390155-E2DE-41DE-B557-6505A775A609}">
+				<Event Name="playExplosion" ID="{84390155-E2DE-41DE-B557-6505A775A609}">
 					<ChildrenList>
 						<Action Name="" ID="{9CF32C9C-EB94-4244-BC1B-B5CB85F6613E}" ShortID="727642469">
 							<PropertyList>
