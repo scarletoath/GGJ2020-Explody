@@ -15,21 +15,26 @@ public class GameController : MonoBehaviour
 		public float LastScore => Scores.Count > 0 ? Scores [ Scores.Count - 1 ] : -1;
 		public float this [ int Index ] => Index >= 0 && Index < Scores.Count ? Scores [ Index ] : -1;
 
+		private int SubCount;
+
 		public void Reset ()
 		{
 			Scores.Clear ();
+			SubCount = 0;
 		}
 
 		public void CreateSubScore ()
 		{
 			Scores.Add ( 0 );
+			SubCount = 0;
 			Debug.Log ( $"created sub score entry {Scores.Count}" );
 		}
 
 		public void AddSubScore ( float Score )
 		{
 			Debug.Assert ( Scores.Count > 0 );
-			Scores [ Scores.Count - 1 ] += Score;
+			float SubTotal = Scores [ Scores.Count - 1 ] * SubCount + Score;
+			Scores [ Scores.Count - 1 ] = SubTotal / ++SubCount;
 			Debug.Log ( $"add sub score {Score}, now {LastScore}" );
 		}
 
@@ -257,8 +262,8 @@ public class GameController : MonoBehaviour
 		TimeSlow.StopSlowDown ();
 		playbackManager.Wait();
         StarRating.gameObject.SetActive ( true );
-		StarRating.SetRating ( Random.Range ( 0.29f , 1 ) , true ); // TODO : Get score in percent
-		ScoreDisplay.ShowScore ( scoreTally.LastScore );
+		StarRating.SetRating ( scoreTally.LastScore , true );
+		ScoreDisplay.ShowScore ( scoreTally.LastScore * scoreTally.LastScore * 2500000 );
         bReadyForReplay = true;
         StartCoroutine( TriggerPlayback() );
         bStarted = false;
