@@ -9,11 +9,7 @@
 					<GameSyncExclusionList/>
 				</SoundBank>
 				<SoundBank Name="music" ID="{66177C91-A278-40ED-827B-BFFA72226D49}">
-					<ObjectInclusionList>
-						<ObjectRef Name="playMusic" ID="{84390155-E2DE-41DE-B557-6505A775A609}" WorkUnitID="{77E68E32-1EC0-4CD8-BABB-69542BCBAEEF}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="timeSlow" ID="{7432C405-A0F0-4588-88DD-F086964235C3}" WorkUnitID="{77E68E32-1EC0-4CD8-BABB-69542BCBAEEF}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="stopAll" ID="{8FFB4C23-1E9E-4FB5-B1C0-E4B2A0053637}" WorkUnitID="{77E68E32-1EC0-4CD8-BABB-69542BCBAEEF}" Filter="7" Origin="Manual"/>
-					</ObjectInclusionList>
+					<ObjectInclusionList/>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
