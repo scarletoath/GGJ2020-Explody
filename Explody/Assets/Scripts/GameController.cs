@@ -272,6 +272,11 @@ public class GameController : MonoBehaviour
         playbackManager.StartPlayback();
     }
 
+    public void OnPlaybackDone()
+    {
+        bReadyForGameplay = true;
+    }
+
 	public void ShowMenu()
     {
         // Triggered by the player

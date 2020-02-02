@@ -84,6 +84,7 @@ public class PlaybackManager : MonoBehaviour
                             }
                         }
 
+                        GameController.Instance.OnPlaybackDone();
                         break;
                     }
 
