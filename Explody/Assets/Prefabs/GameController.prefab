@@ -46,6 +46,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Exploder: {fileID: 1125842290988815263}
+  TimeSlow: {fileID: 0}
+  StarRating: {fileID: 0}
+  ScoreDisplay: {fileID: 0}
+  levelManager:
+    LevelObjects:
+    - {fileID: 8234240141397215286, guid: e7db5db8792eba747b5f997f17a3dd6b, type: 3}
+    - {fileID: 5286874943825579355, guid: 92accfe4792987c47ab8ab43a5fb6e49, type: 3}
+    - {fileID: 700117207007196724, guid: b95de99a3cdefe347b36abceba9594d4, type: 3}
+    - {fileID: 5790522393348721012, guid: 843678ac3e719474c9dd5afe0b4d7ff0, type: 3}
+    PostFinalLevel:
+      SelectionMode: 3
+      ObjectIndex: -1
+      RandomObjectIndices: 
+    Levels:
+    - SelectionMode: 1
+      ObjectIndex: 3
+      RandomObjectIndices: 
+    - SelectionMode: 1
+      ObjectIndex: 1
+      RandomObjectIndices: 
+    - SelectionMode: 1
+      ObjectIndex: 2
+      RandomObjectIndices: 
+    - SelectionMode: 1
+      ObjectIndex: 0
+      RandomObjectIndices: 
 --- !u!114 &995737547242220509
 MonoBehaviour:
   m_ObjectHideFlags: 0
