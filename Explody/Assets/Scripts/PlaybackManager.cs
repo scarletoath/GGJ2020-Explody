@@ -17,7 +17,7 @@ public class PlaybackManager : MonoBehaviour
     }
     private RecordingState state = RecordingState.WAIT;
 
-    public string pieceTag = "piece";
+    public string pieceTag = "Piece";
     public ulong recordingSpeed = 10;
     public ulong playbackSpeed = 2;
 
