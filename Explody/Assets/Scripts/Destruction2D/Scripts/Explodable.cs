@@ -197,7 +197,12 @@ public class Explodable : MonoBehaviour
                 fragment.tag = "Piece";
                 var snap = fragment.AddComponent<SnapToLocation>();
                 snap.SetTolerance(SnapTolerance);
-                var lockedIn = Instantiate(LockedInAchievedPreFab, fragment.transform);
+				var lockedIn =
+#if UNITY_EDITOR
+					!Application.isPlaying
+						? ( ParticleSystem ) PrefabUtility.InstantiatePrefab ( LockedInAchievedPreFab , fragment.transform ) :
+#endif
+						Instantiate ( LockedInAchievedPreFab , fragment.transform );
                 lockedIn.transform.localPosition = fragment.transform.localPosition;
                 snap.lockedInAchieved = lockedIn;
                 fragmentTxs.Add ( ( fragment.transform.localPosition , fragment.transform.localRotation ) );
