@@ -21,7 +21,10 @@ public class ExplodableEditor : Editor
 		EditorGUILayout.PropertyField ( serializedObject.FindProperty ( nameof ( myTarget.fragmentLayer ) ) , new GUIContent ( "Fragment Layer" ) );
 		EditorGUILayout.PropertyField ( serializedObject.FindProperty ( nameof ( myTarget.sortingLayerName ) ) , new GUIContent ( "Sorting Layer" ) );
 		EditorGUILayout.PropertyField ( serializedObject.FindProperty ( nameof ( myTarget.orderInLayer ) ) , new GUIContent ( "Order In Layer" ) );
-		EditorGUILayout.PropertyField ( serializedObject.FindProperty ( nameof ( myTarget.LockedInAchievedPreFab) ) , new GUIContent ( "Locked In Prefab" ) );
+		
+		EditorGUILayout.Space ();
+		EditorGUILayout.PropertyField ( serializedObject.FindProperty ( nameof ( myTarget.LockedInAchievedPreFab ) ) , new GUIContent ( "Locked In Prefab" ) );
+		EditorGUILayout.PropertyField ( serializedObject.FindProperty ( nameof ( myTarget.SnapTolerance ) ) , new GUIContent ( "Snap Tolerance" ) );
 
 		serializedObject.ApplyModifiedProperties ();
 

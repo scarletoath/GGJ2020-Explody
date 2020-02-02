@@ -19,7 +19,8 @@ public class Explodable : MonoBehaviour
     public string sortingLayerName = "Default";
     public int orderInLayer = 0;
 
-    public GameObject LockedInAchievedPreFab;
+    public ParticleSystem LockedInAchievedPreFab;
+	public float SnapTolerance = 0.5f;
 
     public enum ShatterType
     {
@@ -194,11 +195,11 @@ public class Explodable : MonoBehaviour
 				fragment.GetComponent<Renderer>().sortingOrder     = orderInLayer;
 				fragment.GetComponent <Rigidbody2D> ().gravityScale = fragmentGravity;
                 fragment.tag = "Piece";
-                fragment.AddComponent<SnapToLocation>();
-                fragment.GetComponent<SnapToLocation>().SetTolerance(0.5f);
-                GameObject lockedIn = Instantiate(LockedInAchievedPreFab, fragment.transform);
-                lockedIn.transform.position = fragment.transform.position;
-                fragment.GetComponent<SnapToLocation>().lockedInAchieved = lockedIn.GetComponent<ParticleSystem>();
+                var snap = fragment.AddComponent<SnapToLocation>();
+                snap.SetTolerance(SnapTolerance);
+                var lockedIn = Instantiate(LockedInAchievedPreFab, fragment.transform);
+                lockedIn.transform.localPosition = fragment.transform.localPosition;
+                snap.lockedInAchieved = lockedIn;
                 fragmentTxs.Add ( ( fragment.transform.localPosition , fragment.transform.localRotation ) );
 			}
 		}

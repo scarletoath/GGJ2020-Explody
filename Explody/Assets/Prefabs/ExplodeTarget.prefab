@@ -120,9 +120,13 @@ MonoBehaviour:
   allowRuntimeFragmentation: 1
   extraPoints: 10
   subshatterSteps: 0
+  fragmentGravity: 0
   fragmentLayer: Default
   sortingLayerName: Default
   orderInLayer: 0
+  LockedInAchievedPreFab: {fileID: 1676977846455063513, guid: d65064821b1a7aa47a4b2fff1dd20ad0,
+    type: 3}
+  SnapTolerance: 0.5
   shatterType: 1
   fragments: []
 --- !u!61 &5748779887561771605
