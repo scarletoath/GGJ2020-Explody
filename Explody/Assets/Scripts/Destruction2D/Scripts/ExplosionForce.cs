@@ -9,6 +9,8 @@ using UnityEditor;
 public class ExplosionForce : MonoBehaviour {
 	public float force = 50;
 	public float radius = 5;
+	public float minTorque = 250;
+	public float maxTorque = 500;
 	public float upliftModifer = 5;
 
 	[SerializeField] private bool debug;
@@ -54,6 +56,8 @@ public class ExplosionForce : MonoBehaviour {
         Vector3 baseForce = dir.normalized * explosionForce * wearoff;
         baseForce.z = 0;
 		body.AddForce(baseForce);
+		float torque = Random.Range ( minTorque - maxTorque , maxTorque - minTorque );
+		body.AddTorque ( torque < 0 ? ( torque - minTorque ) : ( torque + minTorque ) );
 		var appliedForce = ( body , baseForce );
 
         if (upliftModifer != 0)

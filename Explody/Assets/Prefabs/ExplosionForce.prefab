@@ -46,6 +46,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   force: 4000
   radius: 25
+  minTorque: 0
+  maxTorque: 75
   upliftModifer: 0
   debug: 1
 --- !u!114 &4046255972958491232
