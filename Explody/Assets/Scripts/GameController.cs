@@ -210,6 +210,14 @@ public class GameController : MonoBehaviour
 					OnStartNextLevel ();
             }
         }
+        if ( Input.GetKeyDown( KeyCode.Escape ) ) {
+            ExitGame();
+        }
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 
 	public void OnDisplayNextLevel()
