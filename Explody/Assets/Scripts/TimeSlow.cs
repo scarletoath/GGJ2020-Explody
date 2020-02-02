@@ -50,6 +50,8 @@ public class TimeSlow : MonoBehaviour
             }
             else
             {
+                Debug.Log( "TIME'S UP" );
+                GameController.Instance.OnComplete();
                 Time.timeScale = originalTimeScale;
                 startTime = -1;
             }
