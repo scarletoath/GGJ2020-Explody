@@ -13,6 +13,7 @@ public class Explodable : MonoBehaviour
     public bool allowRuntimeFragmentation = false;
     public int extraPoints = 0;
     public int subshatterSteps = 0;
+	public float fragmentGravity = 0;
 
     public string fragmentLayer = "Default";
     public string sortingLayerName = "Default";
@@ -195,6 +196,7 @@ public class Explodable : MonoBehaviour
 				fragment.layer                                     = LayerMask.NameToLayer(fragmentLayer);
 				fragment.GetComponent<Renderer>().sortingLayerName = sortingLayerName;
 				fragment.GetComponent<Renderer>().sortingOrder     = orderInLayer;
+				fragment.GetComponent <Rigidbody2D> ().gravityScale = fragmentGravity;
 				fragmentTxs.Add ( ( fragment.transform.localPosition , fragment.transform.localRotation ) );
 			}
 		}

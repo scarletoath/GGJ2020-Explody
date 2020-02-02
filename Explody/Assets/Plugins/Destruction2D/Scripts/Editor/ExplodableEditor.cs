@@ -11,6 +11,7 @@ public class ExplodableEditor : Editor
 		EditorGUILayout.PropertyField ( serializedObject.FindProperty ( nameof ( myTarget.allowRuntimeFragmentation ) ) , new GUIContent ( "Allow Runtime Fragmentation" ) );
 		EditorGUILayout.PropertyField ( serializedObject.FindProperty ( nameof ( myTarget.shatterType ) ) , new GUIContent ( "Shatter Type" ) );
 		EditorGUILayout.PropertyField ( serializedObject.FindProperty ( nameof ( myTarget.extraPoints ) ) , new GUIContent ( "Extra Points" ) );
+		EditorGUILayout.PropertyField ( serializedObject.FindProperty ( nameof ( myTarget.fragmentGravity ) ) , new GUIContent ( "Gravity" ) );
 		EditorGUILayout.PropertyField ( serializedObject.FindProperty ( nameof ( myTarget.subshatterSteps ) ) , new GUIContent ( "Subshatter Steps" ) );
 		if (myTarget.subshatterSteps > 1)
 		{
