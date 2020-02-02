@@ -1,0 +1,25 @@
+Event	ID	Name			Wwise Object Path	Notes
+	127433965	timeSlow			\Default Work Unit\timeSlow	
+	417627684	playMusic			\Default Work Unit\playMusic	
+	3086540886	stopAll			\Default Work Unit\stopAll	
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	849161288	timeSlowBass			\Default Work Unit\timeSlowBass	
+	899343179	timeSlowArpesque			\Default Work Unit\timeSlowArpesque	
+	1218380486	timeSlowViolinScrubs			\Default Work Unit\timeSlowViolinScrubs	
+	1710287774	timeSlowPizzViolins			\Default Work Unit\timeSlowPizzViolins	
+	2514420612	timeSlowViolinSwells			\Default Work Unit\timeSlowViolinSwells	
+	2773636852	timeSlowCello			\Default Work Unit\timeSlowCello	
+	3196795824	timeSlowMangledCello			\Default Work Unit\timeSlowMangledCello	
+	3766904140	timeSlowViola			\Default Work Unit\timeSlowViola	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	139739996	Cello	Y:\Studio 5-27A\ExternalProjects\GGJ-2020\PLODE\Explody\Sound\.cache\iOS\SFX\Cello_F65F12A8.wem		\Interactive Music Hierarchy\Default Work Unit\music\cello\Cello\Cello		1836064
+	245964681	Bass	Y:\Studio 5-27A\ExternalProjects\GGJ-2020\PLODE\Explody\Sound\.cache\iOS\SFX\Bass_F65F12A8.wem		\Interactive Music Hierarchy\Default Work Unit\music\bass\Bass\Bass		1836064
+	377995973	Viola	Y:\Studio 5-27A\ExternalProjects\GGJ-2020\PLODE\Explody\Sound\.cache\iOS\SFX\Viola_F65F12A8.wem		\Interactive Music Hierarchy\Default Work Unit\music\viola\Viola\Viola		1296064
+	648564176	Mangled Cello	Y:\Studio 5-27A\ExternalProjects\GGJ-2020\PLODE\Explody\Sound\.cache\iOS\SFX\Mangled Cello_F65F12A8.wem		\Interactive Music Hierarchy\Default Work Unit\music\mangled_cello\Mangled Cello\Mangled Cello		1296064
+	657020099	Pizz Violins	Y:\Studio 5-27A\ExternalProjects\GGJ-2020\PLODE\Explody\Sound\.cache\iOS\SFX\Pizz Violins_F65F12A8.wem		\Interactive Music Hierarchy\Default Work Unit\music\pizz_violins\Pizz Violins\Pizz Violins		1620064
+	673673290	Violin Scrubs	Y:\Studio 5-27A\ExternalProjects\GGJ-2020\PLODE\Explody\Sound\.cache\iOS\SFX\Violin Scrubs_F65F12A8.wem		\Interactive Music Hierarchy\Default Work Unit\music\violin_scrubs\Violin Scrubs\Violin Scrubs		1296064
+	918818940	Violin Swells	Y:\Studio 5-27A\ExternalProjects\GGJ-2020\PLODE\Explody\Sound\.cache\iOS\SFX\Violin Swells_F65F12A8.wem		\Interactive Music Hierarchy\Default Work Unit\music\violin_swells\Violin Swells\Violin Swells		1296064
+	991299546	Arpesque	Y:\Studio 5-27A\ExternalProjects\GGJ-2020\PLODE\Explody\Sound\.cache\iOS\SFX\Arpesque_F65F12A8.wem		\Interactive Music Hierarchy\Default Work Unit\music\arpesque\Arpesque\Arpesque		1296064
+

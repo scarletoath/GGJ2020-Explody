@@ -25,6 +25,45 @@
 			<ObjectPath>\SoundBanks\Default Work Unit\music</ObjectPath>
 			<ShortName>music</ShortName>
 			<Path>music.bnk</Path>
+			<IncludedEvents>
+				<Event Id="417627684" Name="playMusic" ObjectPath="\Events\Default Work Unit\playMusic" DurationType="Infinite"/>
+				<Event Id="3086540886" Name="stopAll" ObjectPath="\Events\Default Work Unit\stopAll" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="127433965" Name="timeSlow" ObjectPath="\Events\Default Work Unit\timeSlow" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="139739996" Language="SFX">
+					<ShortName>Cello.wav</ShortName>
+					<Path>SFX/Cello_F65F12A8.wem</Path>
+				</File>
+				<File Id="245964681" Language="SFX">
+					<ShortName>Bass.wav</ShortName>
+					<Path>SFX/Bass_F65F12A8.wem</Path>
+				</File>
+				<File Id="377995973" Language="SFX">
+					<ShortName>Viola.wav</ShortName>
+					<Path>SFX/Viola_F65F12A8.wem</Path>
+				</File>
+				<File Id="648564176" Language="SFX">
+					<ShortName>Mangled Cello.wav</ShortName>
+					<Path>SFX/Mangled Cello_F65F12A8.wem</Path>
+				</File>
+				<File Id="657020099" Language="SFX">
+					<ShortName>Pizz Violins.wav</ShortName>
+					<Path>SFX/Pizz Violins_F65F12A8.wem</Path>
+				</File>
+				<File Id="673673290" Language="SFX">
+					<ShortName>Violin Scrubs.wav</ShortName>
+					<Path>SFX/Violin Scrubs_F65F12A8.wem</Path>
+				</File>
+				<File Id="918818940" Language="SFX">
+					<ShortName>Violin Swells.wav</ShortName>
+					<Path>SFX/Violin Swells_F65F12A8.wem</Path>
+				</File>
+				<File Id="991299546" Language="SFX">
+					<ShortName>Arpesque.wav</ShortName>
+					<Path>SFX/Arpesque_F65F12A8.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>
