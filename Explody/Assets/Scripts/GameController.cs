@@ -222,6 +222,10 @@ public class GameController : MonoBehaviour
 		levelManager.SpawnNextLevel ();
         Exploder.ExplodeAtThisPoint ();
 		TimeSlow.StartSlowDown ();
+
+        GameObject[] pieces = GameObject.FindGameObjectsWithTag( "Piece" );
+
+        playbackManager.ResetPlayback( pieces );
         playbackManager.StartRecording();
 
 		bStarted = true;
@@ -234,12 +238,21 @@ public class GameController : MonoBehaviour
         Debug.Log( "GameController::OnComplete() Called." );
 		TimeSlow.StopSlowDown ();
 		playbackManager.Wait();
-		StarRating.gameObject.SetActive ( true );
+        StarRating.gameObject.SetActive ( true );
 		StarRating.SetRating ( Random.Range ( 0.29f , 1 ) , true ); // TODO : Get score in percent
 		ScoreDisplay.ShowScore ( scoreTally.LastScore );
         bReadyForReplay = true;
-		bStarted = false;
+        StartCoroutine( TriggerPlayback() );
+        bStarted = false;
 	}
+
+    System.Collections.IEnumerator TriggerPlayback()
+    {
+        if ( bReadyForReplay ) {
+            yield return new WaitForSeconds( .5f );
+            playbackManager.StartPlayback();
+        }
+    }
 
     public void OnStartPlayback()
     {
