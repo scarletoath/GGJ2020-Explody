@@ -97,7 +97,6 @@
 														<MusicClip Name="Arpesque" ID="{32E8398B-4300-4B4A-8FB0-092F1CBFAF9D}">
 															<PropertyList>
 																<Property Name="EndTrimOffset" Type="Real64" Value="22500"/>
-																<Property Name="FadeInDuration" Type="Real64" Value="393.846153846154"/>
 																<Property Name="FadeOutDuration" Type="Real64" Value="492.307692307695"/>
 															</PropertyList>
 															<AudioSourceRef Name="Arpesque" ID="{06254791-85B4-46D2-BE20-8F32FCEC4E42}"/>
