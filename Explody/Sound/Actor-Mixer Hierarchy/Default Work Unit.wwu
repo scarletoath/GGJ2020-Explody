@@ -1,6 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{84B482EF-7721-497E-9BD7-C0DD224B323B}" SchemaVersion="94">
 	<AudioObjects>
-		<WorkUnit Name="Default Work Unit" ID="{84B482EF-7721-497E-9BD7-C0DD224B323B}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{84B482EF-7721-497E-9BD7-C0DD224B323B}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="sfx" ID="{E9413D79-A7BD-40BB-A3EE-995A324EBA99}" ShortID="763732417">
+					<ChildrenList>
+						<Sound Name="explosion" ID="{A745C34F-3C4C-497F-B870-D8E0F71B0767}" ShortID="173840272">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="sfx" ID="{ADC073F6-406F-43B1-83B6-F6B0C9CD20B2}" WorkUnitID="{33A1E24E-D924-4E26-9989-35A78A2F113E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="sfx" ID="{8072466E-CD5F-4177-86B2-F9BC42FC9CCA}" WorkUnitID="{E106BA0E-10FD-494F-90F3-8944F29456F3}"/>
+								</Reference>
+							</ReferenceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="ui" ID="{B5906B80-4FEE-48D2-85C4-4D197BD4D471}" ShortID="183993682">
+					<ChildrenList>
+						<Sound Name="click" ID="{6C91800F-92B1-4E48-A5DE-8D6124443A60}" ShortID="131535552">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{33A1E24E-D924-4E26-9989-35A78A2F113E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="sfx" ID="{8072466E-CD5F-4177-86B2-F9BC42FC9CCA}" WorkUnitID="{E106BA0E-10FD-494F-90F3-8944F29456F3}"/>
+								</Reference>
+							</ReferenceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>
