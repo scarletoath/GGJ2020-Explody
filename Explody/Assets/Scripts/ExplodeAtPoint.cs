@@ -21,13 +21,13 @@ public class ExplodeAtPoint : MonoBehaviour
 		ExplosionForce = ExplosionForce == null ? GetComponent <ExplosionForce> () : ExplosionForce;
 	}
 
-	private void Update()
-	{
-		if(Input.GetKeyDown(KeyCode.E))
-		{
-			ExplodeAtThisPoint();
-		}
-	}
+// 	private void Update()
+// 	{
+// 		if(Input.GetKeyDown(KeyCode.E))
+// 		{
+// 			ExplodeAtThisPoint();
+// 		}
+// 	}
 
 	public void Explode ( Vector3 Position , float Radius = 0.1f )
 	{
