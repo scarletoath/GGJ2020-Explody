@@ -1,19 +1,11 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class EdgeDeath : MonoBehaviour
 {
-    public Transform particle;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	[SerializeField] private GameObject fxPrefab;
+	[SerializeField] private float fxLifetime;
 
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -22,8 +14,22 @@ public class EdgeDeath : MonoBehaviour
 		{
 			Debug.Log ( $"destroy {col}" );
 			GameController.Instance.UnregisterSnap ( col.GetComponent <SnapToLocation> () );
+			StartCoroutine ( DestroyFxAfterTime ( Instantiate ( fxPrefab ).transform , col.gameObject ) );
             col.gameObject.SetActive( false );
         }
     }
+
+	private IEnumerator DestroyFxAfterTime ( Transform fxInstance , GameObject fxSource )
+	{
+		fxInstance.position = fxSource.transform.position;
+		var fxSourceRigidbody = fxSource.GetComponent <Rigidbody2D> ();
+		if ( fxSourceRigidbody != null )
+		{
+			fxInstance.rotation = Quaternion.LookRotation ( -fxSourceRigidbody.velocity );
+		}
+
+		yield return new WaitForSecondsRealtime ( fxLifetime );
+		Destroy ( fxInstance );
+	}
 
 }
