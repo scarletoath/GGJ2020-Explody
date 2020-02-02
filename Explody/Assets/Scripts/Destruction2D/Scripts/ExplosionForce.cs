@@ -79,7 +79,8 @@ public class ExplosionForce : MonoBehaviour {
 		if ( debug )
 			using ( new Handles.DrawingScope ( Color.red ) )
 				foreach ( var AppliedForce in appliedForces )
-					Handles.DrawLine ( AppliedForce.r.position , ( Vector3 ) AppliedForce.r.position + AppliedForce.force );
+					if ( AppliedForce.r != null )
+						Handles.DrawLine ( AppliedForce.r.position , ( Vector3 ) AppliedForce.r.position + AppliedForce.force );
 	}
 #endif
 

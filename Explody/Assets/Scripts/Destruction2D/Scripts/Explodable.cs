@@ -40,7 +40,7 @@ public class Explodable : MonoBehaviour
         //if fragments were not created before runtime then create them now
         if (fragments.Count == 0 && allowRuntimeFragmentation)
         {
-            generateFragments();
+            generateFragments(true);
 			foreach ( GameObject frag in fragments )
 			{
 				frag.transform.parent = transform;
@@ -55,8 +55,8 @@ public class Explodable : MonoBehaviour
                 if (mRend.sharedMaterial == null)
                 {
                     var sRend = GetComponent<SpriteRenderer>();
-                    mRend.sharedMaterial = sRend.sharedMaterial;
-                    mRend.sharedMaterial.SetTexture("_MainTex", sRend.sprite.texture);
+                    mRend.material = sRend.sharedMaterial;
+                    mRend.material.SetTexture("_MainTex", sRend.sprite.texture);
 				}
 				frag.SetActive(true);
             }
@@ -71,7 +71,7 @@ public class Explodable : MonoBehaviour
 		if (fragments.Count > 0)
         {
             var renderer = gameObject.GetComponent<SpriteRenderer>();
-            var colider = gameObject.GetComponent<BoxCollider2D>();
+            var colider = gameObject.GetComponent<Collider2D>();
 
 			renderer.enabled = false;
 			colider.enabled = false;
@@ -86,13 +86,8 @@ public class Explodable : MonoBehaviour
         {
             deleteFragments();
         }
-        generateFragments();
+        generateFragments(false);
         setPolygonsForDrawing();
-        foreach (GameObject frag in fragments)
-        {
-            frag.transform.parent = transform;
-            frag.SetActive(false);
-        }
     }
     public void deleteFragments()
     {
@@ -130,7 +125,7 @@ public class Explodable : MonoBehaviour
 	private void resetSingle ()
 	{
 		var renderer = gameObject.GetComponent<SpriteRenderer> ();
-		var colider = gameObject.GetComponent<BoxCollider2D> ();
+		var colider = gameObject.GetComponent<Collider2D> ();
 
 		renderer.enabled = true;
 		colider.enabled = true;
@@ -142,26 +137,20 @@ public class Explodable : MonoBehaviour
         {
             deleteFragments();
         }
-        generateFragments(true);
+        generateFragments(false, true);
         setPolygonsForDrawing();
-
-        foreach (GameObject frag in fragments)
-        {
-            frag.transform.parent = transform;
-            frag.SetActive(false);
-        }
     }
 
     /// <summary>
     /// Turns Gameobject into multiple fragments
     /// </summary>
-    private void generateFragments(bool meshSaved = false)
+    private void generateFragments(bool isActive, bool meshSaved = false)
     {
 #if UNITY_EDITOR
 		string savePath = null;
 		if ( meshSaved )
 		{
-			savePath = EditorUtility.SaveFolderPanel ( "Save fracture pieces" , "Assets/Mesh" , "" );
+			savePath = EditorUtility.SaveFolderPanel ( "Save fracture pieces" , "Assets" , "" );
 			if ( !string.IsNullOrEmpty ( savePath ) )
 			{
 				savePath = savePath.Substring ( savePath.IndexOf ( "Assets/" , StringComparison.OrdinalIgnoreCase ) );
@@ -195,7 +184,12 @@ public class Explodable : MonoBehaviour
 		{
 			if (fragment != null)
 			{
+				fragment.transform.SetParent ( transform );
+				if ( fragment.activeSelf != isActive )
+					fragment.SetActive ( isActive );
+
 				fragment.layer                                     = LayerMask.NameToLayer(fragmentLayer);
+				fragment.name += $"_{fragment.transform.GetSiblingIndex () + 1}";
 				fragment.GetComponent<Renderer>().sortingLayerName = sortingLayerName;
 				fragment.GetComponent<Renderer>().sortingOrder     = orderInLayer;
 				fragment.GetComponent <Rigidbody2D> ().gravityScale = fragmentGravity;
@@ -213,7 +207,10 @@ public class Explodable : MonoBehaviour
 		if ( meshSaved )
 		{
 			foreach ( var mesh in fragments.Select ( f => f.GetComponent <MeshFilter> () ) )
-				AssetDatabase.CreateAsset ( mesh , savePath + '/' + transform.name + "_" + mesh.transform.GetSiblingIndex () + ".asset" );
+			{
+				string filePath = savePath + '/' + mesh.transform.name + ".asset";
+				AssetDatabase.CreateAsset ( mesh.sharedMesh , filePath );
+			}
 			AssetDatabase.SaveAssets ();
 		}
 #endif
