@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4461927156338120514}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0190f627cf33e7f41943d30796d1795c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 2000
-  radius: 5
+  force: 4000
+  radius: 25
   upliftModifer: 0
   debug: 1
 --- !u!114 &4046255972958491232
@@ -61,5 +61,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Camera: {fileID: 0}
-  Explodable: {fileID: 0}
   ExplosionForce: {fileID: 4461927156338120513}
