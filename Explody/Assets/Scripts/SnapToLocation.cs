@@ -28,20 +28,10 @@ public class SnapToLocation : MonoBehaviour
                 lookForSnaps = false;
                 positionIsFixed = true;
                 transform.position = originalLocation;
+                // Wwise Audio Event
                 CreateLockedInAchieved();
 				GameController.Instance.UnregisterSnap ( this );
 			}
-        }
-
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            // set snap location
-            SetSnapLocation();
-        }
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            //start tracking
-            StartTracking();
         }
 
         if (GetPositionIsFixed())
