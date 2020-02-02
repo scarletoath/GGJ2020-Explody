@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EdgeDeath : MonoBehaviour
 {
+    public Transform particle;
     // Start is called before the first frame update
     void Start()
     {
