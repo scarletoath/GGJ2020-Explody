@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: f7523276cbe3dbd44bf0c98649f3339b
+=======
+guid: dce0f6c8b2f71044f9c9a3766c860345
+>>>>>>> Fixing clobbers
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

@@ -22,19 +22,19 @@ public class GameInput : MonoBehaviour
 		if ( Input.GetButtonDown ( GrabAction ) )
 		{
 			OnGrab.Invoke ( true );
-			//Debug.Log ( "grab true" );
+			Debug.Log("grab true");
 		}
 		else if ( Input.GetButtonUp ( GrabAction ) )
 		{
 			OnGrab.Invoke ( false );
-			//Debug.Log ( "grab false" );
+			Debug.Log("grab false");
 		}
 
 		float RotateDelta = RotateContinuously || ( Input.GetButtonDown ( RotateAction ) || Input.mouseScrollDelta.y != 0 ) ? Input.GetAxis ( RotateAction ) : 0;
 		if ( RotateDelta != 0 )
 		{
 			OnRotate.Invoke ( RotateDelta );
-			//Debug.Log ( $"rotate {RotateDelta}" );
+			Debug.Log($"rotate {RotateDelta}");
 		}
 	}
 
