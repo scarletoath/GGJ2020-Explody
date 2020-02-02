@@ -51,12 +51,14 @@ public class SnapToLocation : MonoBehaviour
 
     public void SetSnapLocation()
     {
+        Debug.Log("Setting snap location");
         originalLocation = transform.position;
         originalRotation = transform.rotation;
     }
 
     public void StartTracking()
     {
+        Debug.Log("Starting to track for snaps");
         lookForSnaps = true;
     }
 

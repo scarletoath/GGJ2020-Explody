@@ -56,19 +56,19 @@ public class DragInput : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity);
             if (hit)
             {
-                if (hit.transform.CompareTag("Player") && !hit.transform.gameObject.GetComponent<SnapToLocation>().GetPositionIsFixed()) // subject to change
+                if (hit.transform.CompareTag("Piece") && !hit.transform.gameObject.GetComponent<SnapToLocation>().GetPositionIsFixed()) // subject to change
                 {
                     Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                     dragOffset = hit.transform.position - mousePos;
                     dragOffset.z = 0;
                     draggedObject = hit.transform.gameObject;
-                    draggedObject.gameObject.GetComponent<Rigidbody2D>().simulated = false;
+                    draggedObject.gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
                 }
             }
         }
         else if (draggedObject != null)
         {
-            draggedObject.gameObject.GetComponent<Rigidbody2D>().simulated = true;
+            draggedObject.gameObject.GetComponent<Rigidbody2D>().isKinematic = false;
             draggedObject.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             draggedObject.gameObject.GetComponent<Rigidbody2D>().AddForce(draggedVelocity * 50);
             draggedObject = null;
