@@ -104,10 +104,29 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{4E7206DF-FED3-404C-AB3B-49E1B8B857E1}" ShortID="590195852">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="1"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="timeSlow" ID="{2A4A09F0-BC6E-404B-BD25-7377E0788C5C}" WorkUnitID="{01C8367F-4B90-4007-96F1-66D72827462E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{7C74568D-2DA7-4FD3-9A97-4B6EFD36C723}" ShortID="601202922">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="explosion" ID="{A745C34F-3C4C-497F-B870-D8E0F71B0767}" WorkUnitID="{84B482EF-7721-497E-9BD7-C0DD224B323B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 						<Action Name="" ID="{9CF32C9C-EB94-4244-BC1B-B5CB85F6613E}" ShortID="727642469">
 							<PropertyList>
 								<Property Name="FadeInCurve" Type="int16" Value="7"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.25"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -118,7 +137,7 @@
 						<Action Name="" ID="{11896419-FC29-402C-89CF-C1D84847A1EF}" ShortID="328016573">
 							<PropertyList>
 								<Property Name="FadeInCurve" Type="int16" Value="7"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -129,7 +148,7 @@
 						<Action Name="" ID="{16F57E1A-1EAB-404E-9B18-96880BAE752F}" ShortID="1032803081">
 							<PropertyList>
 								<Property Name="FadeInCurve" Type="int16" Value="7"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -140,7 +159,7 @@
 						<Action Name="" ID="{1199F669-7DE9-4AC2-BFF0-A504F31790E1}" ShortID="250899752">
 							<PropertyList>
 								<Property Name="FadeInCurve" Type="int16" Value="7"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -151,7 +170,7 @@
 						<Action Name="" ID="{C6A3C18C-FDD9-4D12-BE30-240039278E1E}" ShortID="808066490">
 							<PropertyList>
 								<Property Name="FadeInCurve" Type="int16" Value="7"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -162,7 +181,7 @@
 						<Action Name="" ID="{3926849A-1172-455F-BE2E-A2FD826F50E3}" ShortID="1018185187">
 							<PropertyList>
 								<Property Name="FadeInCurve" Type="int16" Value="7"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -173,7 +192,7 @@
 						<Action Name="" ID="{63A9D60E-1431-4EFD-B711-7581BFE23519}" ShortID="530713430">
 							<PropertyList>
 								<Property Name="FadeInCurve" Type="int16" Value="7"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -184,7 +203,7 @@
 						<Action Name="" ID="{B30B6485-688C-43E0-83D8-3833CB931921}" ShortID="992030119">
 							<PropertyList>
 								<Property Name="FadeInCurve" Type="int16" Value="7"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">

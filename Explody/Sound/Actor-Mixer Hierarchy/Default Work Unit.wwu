@@ -6,6 +6,36 @@
 				<Folder Name="sfx" ID="{E9413D79-A7BD-40BB-A3EE-995A324EBA99}" ShortID="763732417">
 					<ChildrenList>
 						<Sound Name="explosion" ID="{A745C34F-3C4C-497F-B870-D8E0F71B0767}" ShortID="173840272">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<RTPCList>
+										<RTPC Name="" ID="{A8605074-B1A9-47A8-92C0-9B97FE175733}" ShortID="343654605">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="timeSlow" ID="{2A4A09F0-BC6E-404B-BD25-7377E0788C5C}" WorkUnitID="{01C8367F-4B90-4007-96F1-66D72827462E}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{0F75ADB6-1EDC-455A-9FDB-A73E3C96D7F2}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="65537"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>0</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>1</XPos>
+														<YPos>-2000</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="sfx" ID="{ADC073F6-406F-43B1-83B6-F6B0C9CD20B2}" WorkUnitID="{33A1E24E-D924-4E26-9989-35A78A2F113E}"/>
@@ -14,6 +44,20 @@
 									<ObjectRef Name="sfx" ID="{8072466E-CD5F-4177-86B2-F9BC42FC9CCA}" WorkUnitID="{E106BA0E-10FD-494F-90F3-8944F29456F3}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Weapons-FlashBangGrenade-Me" ID="{2394FB8E-BC17-4836-A713-3D98550B5D24}" ShortID="516908577">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="7.59183333333333"/>
+										<Property Name="TrimEnd" Type="Real64" Value="8.66916666666666"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Weapons-FlashBangGrenade-Me.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Weapons-FlashBangGrenade-Me" ID="{2394FB8E-BC17-4836-A713-3D98550B5D24}" Platform="Linked"/>
+							</ActiveSourceList>
 						</Sound>
 						<Sound Name="ambience" ID="{81A23B5B-FBCF-424A-B263-805CBF54C8AC}" ShortID="930407598">
 							<PropertyList>
