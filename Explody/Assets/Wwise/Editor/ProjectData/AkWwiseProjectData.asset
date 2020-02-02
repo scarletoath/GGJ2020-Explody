@@ -184,14 +184,14 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 0eba06e1fd104f4990f38944f29456f3
     GuidInternal: 
-    m_lastTime: -8586209704534775808
+    m_lastTime: -8586209398684775808
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks/Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 770ad0eed0cbda4f95a88e7cbd179bfa
     GuidInternal: 
-    m_lastTime: -8586209426154775808
+    m_lastTime: -8586209340904775808
     List:
     - name: music
       guid: 917c176678a2ed40827bbffa72226d49
@@ -216,7 +216,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 328ee677c01ed84cbabb69542bcbaeef
     GuidInternal: 
-    m_lastTime: -8586209427004775808
+    m_lastTime: -8586209340904775808
     List:
     - name: clickShardArp
       guid: b575c34c2021d64dae60bfcb834c33bb
@@ -224,141 +224,201 @@ MonoBehaviour:
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
+      - ElementName: music
+        ObjectType: 4
       - ElementName: clickShardArp
         ObjectType: 3
-      Path: Default Work Unit/clickShardArp
+      Path: Default Work Unit/music/clickShardArp
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 0.164062
+      minDuration: 0.164062
     - name: clickShardBass
       guid: 465497f355a3b042a44c682a81ec94a1
       id: 4065971336
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
+      - ElementName: music
+        ObjectType: 4
       - ElementName: clickShardBass
         ObjectType: 3
-      Path: Default Work Unit/clickShardBass
+      Path: Default Work Unit/music/clickShardBass
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 0.164062
+      minDuration: 0.164062
     - name: clickShardCello
       guid: ce4d8baa6529e74587e26cbcebd9956b
       id: 3141704500
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
+      - ElementName: music
+        ObjectType: 4
       - ElementName: clickShardCello
         ObjectType: 3
-      Path: Default Work Unit/clickShardCello
+      Path: Default Work Unit/music/clickShardCello
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 0.164062
+      minDuration: 0.164062
     - name: clickShardMangled
       guid: 57f8761d3e6f4c4bb0328d3a0e7968cc
       id: 2673103409
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
+      - ElementName: music
+        ObjectType: 4
       - ElementName: clickShardMangled
         ObjectType: 3
-      Path: Default Work Unit/clickShardMangled
+      Path: Default Work Unit/music/clickShardMangled
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 0.164062
+      minDuration: 0.164062
     - name: clickShardPizz
       guid: 45d456c17aef27408e2248b0d190a444
       id: 4241405248
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
+      - ElementName: music
+        ObjectType: 4
       - ElementName: clickShardPizz
         ObjectType: 3
-      Path: Default Work Unit/clickShardPizz
+      Path: Default Work Unit/music/clickShardPizz
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 0.164062
+      minDuration: 0.164062
     - name: clickShardScrubs
       guid: 74fb2a8576e8be4e87b0f1caccffcd9d
       id: 596780413
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
+      - ElementName: music
+        ObjectType: 4
       - ElementName: clickShardScrubs
         ObjectType: 3
-      Path: Default Work Unit/clickShardScrubs
+      Path: Default Work Unit/music/clickShardScrubs
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 0.164062
+      minDuration: 0.164062
     - name: clickShardSwells
       guid: a26f407c4b12f5498908279cceb0a904
       id: 4098476599
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
+      - ElementName: music
+        ObjectType: 4
       - ElementName: clickShardSwells
         ObjectType: 3
-      Path: Default Work Unit/clickShardSwells
+      Path: Default Work Unit/music/clickShardSwells
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 0.164062
+      minDuration: 0.164062
     - name: clickShardViola
       guid: 578ad3d840a52f4f8ccb0635dbf215f3
       id: 4093498252
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
+      - ElementName: music
+        ObjectType: 4
       - ElementName: clickShardViola
         ObjectType: 3
-      Path: Default Work Unit/clickShardViola
+      Path: Default Work Unit/music/clickShardViola
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: playAmb
-      guid: 686004b25dfa3548a72fd00d24d94273
-      id: 1837310473
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: playAmb
-        ObjectType: 3
-      Path: Default Work Unit/playAmb
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.164062
+      minDuration: 0.164062
     - name: playExplosion
       guid: 55013984dee2de41b5576505a775a609
       id: 182906760
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
+      - ElementName: music
+        ObjectType: 4
       - ElementName: playExplosion
         ObjectType: 3
-      Path: Default Work Unit/playExplosion
+      Path: Default Work Unit/music/playExplosion
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: stopAll
-      guid: 234cfb8f9e1eb54fb1c0e4b2a0053637
-      id: 3086540886
+    - name: playLevelEnd
+      guid: f094b9b718a33040bf3774a31ac31750
+      id: 3860608094
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: stopAll
+      - ElementName: playLevelEnd
         ObjectType: 3
-      Path: Default Work Unit/stopAll
+      Path: Default Work Unit/playLevelEnd
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: playLevelStart
+      guid: 686004b25dfa3548a72fd00d24d94273
+      id: 3714850613
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: playLevelStart
+        ObjectType: 3
+      Path: Default Work Unit/playLevelStart
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: playReplay
+      guid: e2b0d0fdc68c3a4b8054de9c2c92254b
+      id: 997151998
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: music
+        ObjectType: 4
+      - ElementName: playReplay
+        ObjectType: 3
+      Path: Default Work Unit/music/playReplay
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: playReplayEnd
+      guid: eaa1763c0b2cd24f9313144c27bcbd6e
+      id: 905755037
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: music
+        ObjectType: 4
+      - ElementName: playReplayEnd
+        ObjectType: 3
+      Path: Default Work Unit/music/playReplayEnd
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - name: timeSlow
-      guid: 05c43274f0a0884588ddf086964235c3
-      id: 127433965
+    - name: playSnap
+      guid: 85f8349580598d44bc41852bc3fc3c66
+      id: 978238807
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: timeSlow
+      - ElementName: playSnap
         ObjectType: 3
-      Path: Default Work Unit/timeSlow
+      Path: Default Work Unit/playSnap
+      maxAttenuation: 0
+      maxDuration: 0.291667
+      minDuration: 0.291667
+    - name: playTimeSlow
+      guid: 05c43274f0a0884588ddf086964235c3
+      id: 2301652195
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: music
+        ObjectType: 4
+      - ElementName: playTimeSlow
+        ObjectType: 3
+      Path: Default Work Unit/music/playTimeSlow
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -421,8 +481,17 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 7f36c801904b074096f166d72827462e
     GuidInternal: 
-    m_lastTime: -8586209710124775808
+    m_lastTime: -8586209340904775808
     List:
+    - name: timeSlow
+      guid: f0094a2a6ebc4b40bd257377e0788c5c
+      id: 127433965
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: timeSlow
+        ObjectType: 13
+      Path: Default Work Unit/timeSlow
     - name: timeSlowArpesque
       guid: bf8cbefbe30ae44f8e9cefabfedce6a5
       id: 899343179
