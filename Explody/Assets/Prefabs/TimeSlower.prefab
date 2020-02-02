@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9172920535809352241}
   m_Layer: 0
   m_Name: TimeSlower
-  m_TagString: Untagged
+  m_TagString: TimeSlow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

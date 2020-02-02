@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class SnapToLocation : MonoBehaviour
 {
-    [SerializeField]
-    float tolerance;
+    [SerializeField] float tolerance;
 
     Vector3 originalLocation;
     Quaternion originalRotation;
@@ -13,9 +12,12 @@ public class SnapToLocation : MonoBehaviour
 
     bool positionIsFixed;
 
+    public ParticleSystem lockedInAchieved;
+
     // Start is called before the first frame update
     void Start()
     {
+        SetSnapLocation();
     }
 
     // Update is called once per frame
@@ -28,6 +30,7 @@ public class SnapToLocation : MonoBehaviour
                 lookForSnaps = false;
                 positionIsFixed = true;
                 transform.position = originalLocation;
+                CreateLockedInAchieved();
             }
         }
 
@@ -51,7 +54,7 @@ public class SnapToLocation : MonoBehaviour
 
     public void SetSnapLocation()
     {
-        Debug.Log("Setting snap location");
+        Debug.Log("Setting snap location " + transform.position);
         originalLocation = transform.position;
         originalRotation = transform.rotation;
     }
@@ -78,5 +81,15 @@ public class SnapToLocation : MonoBehaviour
         {
             return 0;
         }
+    }
+
+    public void SetTolerance(float tol)
+    {
+        tolerance = tol;
+    }
+
+    void CreateLockedInAchieved()
+    {
+        lockedInAchieved.Play();
     }
 }
