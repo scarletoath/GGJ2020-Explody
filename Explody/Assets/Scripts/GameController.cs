@@ -173,6 +173,7 @@ public class GameController : MonoBehaviour
 	[SerializeField] private TimeSlow TimeSlow;
 	[SerializeField] private StarRating StarRating;
 	[SerializeField] private ScoreDisplay ScoreDisplay;
+	[SerializeField] ParticleSystem InitialExplosionFx;
 
 	[Space] 
 	
@@ -232,6 +233,7 @@ public class GameController : MonoBehaviour
 		ScoreDisplay.Hide();
 		snaps.Clear();
 		scoreTally.CreateSubScore();
+		// Wwise Audio Event @ekampa Level begin (after replay, before explosion)
 
 		levelManager.ClearLevel();
 		levelManager.SpawnNextLevel();
@@ -243,15 +245,9 @@ public class GameController : MonoBehaviour
         // Triggered when the player starts the level.
         // Trigger the playback manager to start recording.
         Debug.Log( "GameController::OnStartNextLevel() Called." );
-        Exploder.ExplodeAtThisPoint ();
-		TimeSlow.StartSlowDown ();
-
-        GameObject[] pieces = GameObject.FindGameObjectsWithTag( "Piece" );
-
-        playbackManager.ResetPlayback( pieces );
-        playbackManager.StartRecording();
-
+		AkSoundEngine.PostEvent("playExplosion", gameObject);
 		bStarted = true;
+		StartCoroutine(TriggerExplosionAfterSwell());
 	}
 
     public void OnComplete()
@@ -273,11 +269,24 @@ public class GameController : MonoBehaviour
     {
         if ( bReadyForReplay ) {
             yield return new WaitForSeconds( .5f );
-            playbackManager.StartPlayback();
+			// Wwise Audio Event @ekampa Play replay
+			playbackManager.StartPlayback();
         }
     }
 
-    public void OnStartPlayback()
+	System.Collections.IEnumerator TriggerExplosionAfterSwell()
+	{
+		yield return new WaitForSecondsRealtime(0.25f);
+		InitialExplosionFx.Play();
+		Exploder.ExplodeAtThisPoint();
+		TimeSlow.StartSlowDown();
+		GameObject[] pieces = GameObject.FindGameObjectsWithTag("Piece");
+		playbackManager.ResetPlayback(pieces);
+		playbackManager.StartRecording();
+	}
+
+
+	public void OnStartPlayback()
     {
         // Triggered shortly after OnComplete (x seconds? or just when the player triggeres it manually?)
         // Trigger the playback manager to play back the recording.
@@ -287,7 +296,8 @@ public class GameController : MonoBehaviour
 
     public void OnPlaybackDone()
     {
-        bReadyForGameplay = true;
+		// Wwise Audio Event @ekampa End of Replay
+		bReadyForGameplay = true;
     }
 
 	public void ShowMenu()
