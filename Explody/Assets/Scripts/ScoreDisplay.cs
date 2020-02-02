@@ -30,6 +30,7 @@ public class ScoreDisplay : MonoBehaviour
 	public void ShowScore ( float Score )
 	{
 		ElapsedRampDuration = 0;
+		CurrentScore = 0;
 		TargetScore = Score;
 		gameObject.SetActive ( true );
 	}
