@@ -15,6 +15,41 @@
 								</Reference>
 							</ReferenceList>
 						</Sound>
+						<Sound Name="ambience" ID="{81A23B5B-FBCF-424A-B263-805CBF54C8AC}" ShortID="930407598">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="sfx" ID="{ADC073F6-406F-43B1-83B6-F6B0C9CD20B2}" WorkUnitID="{33A1E24E-D924-4E26-9989-35A78A2F113E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="sfx" ID="{8072466E-CD5F-4177-86B2-F9BC42FC9CCA}" WorkUnitID="{E106BA0E-10FD-494F-90F3-8944F29456F3}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Winds-DesertWind-Ext-VerySt" ID="{4F625E9A-BF15-4C00-BC99-BAC115175AEA}" ShortID="202910255">
+									<PropertyList>
+										<Property Name="CrossfadeDuration" Type="Real64" Value="10000"/>
+										<Property Name="LoopBegin" Type="Real64" Value="25"/>
+										<Property Name="LoopEnd" Type="Real64" Value="100"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="20"/>
+										<Property Name="TrimEnd" Type="Real64" Value="105"/>
+										<Property Name="VolumeOffset" Type="Real64">
+											<ValueList>
+												<Value>14</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Winds-DesertWind-Ext-VerySt.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Winds-DesertWind-Ext-VerySt" ID="{4F625E9A-BF15-4C00-BC99-BAC115175AEA}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="ui" ID="{B5906B80-4FEE-48D2-85C4-4D197BD4D471}" ShortID="183993682">
@@ -22,7 +57,7 @@
 						<Sound Name="click" ID="{6C91800F-92B1-4E48-A5DE-8D6124443A60}" ShortID="131535552">
 							<ReferenceList>
 								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{33A1E24E-D924-4E26-9989-35A78A2F113E}"/>
+									<ObjectRef Name="sfx" ID="{ADC073F6-406F-43B1-83B6-F6B0C9CD20B2}" WorkUnitID="{33A1E24E-D924-4E26-9989-35A78A2F113E}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="sfx" ID="{8072466E-CD5F-4177-86B2-F9BC42FC9CCA}" WorkUnitID="{E106BA0E-10FD-494F-90F3-8944F29456F3}"/>

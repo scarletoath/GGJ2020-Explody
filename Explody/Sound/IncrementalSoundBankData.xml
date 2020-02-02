@@ -4,13 +4,13 @@
 		<Banks>
 			<Language ID="393239870">
 				<File Name="Init" Hash="2234171132" Timestamp="1580636691"/>
-				<File Name="music" Hash="1580309629" Timestamp="1580661702"/>
-				<File Name="sfx" Hash="678864719" Timestamp="1580636349"/>
+				<File Name="music" Hash="1226185224" Timestamp="1580665457"/>
+				<File Name="sfx" Hash="1613063707" Timestamp="1580665457"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="2558849089" Timestamp="1580661702"/>
+				<File Name="" Hash="759672901" Timestamp="1580665457"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
@@ -18,13 +18,13 @@
 		<Banks>
 			<Language ID="393239870">
 				<File Name="Init" Hash="2196354443" Timestamp="1580636691"/>
-				<File Name="music" Hash="1580309629" Timestamp="1580661702"/>
-				<File Name="sfx" Hash="678864719" Timestamp="1580636352"/>
+				<File Name="music" Hash="1226185224" Timestamp="1580665460"/>
+				<File Name="sfx" Hash="1613063707" Timestamp="1580665459"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="3618592271" Timestamp="1580661702"/>
+				<File Name="" Hash="640043907" Timestamp="1580665460"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
@@ -32,13 +32,13 @@
 		<Banks>
 			<Language ID="393239870">
 				<File Name="Init" Hash="4125888628" Timestamp="1580636692"/>
-				<File Name="music" Hash="1580309629" Timestamp="1580661704"/>
-				<File Name="sfx" Hash="678864719" Timestamp="1580636355"/>
+				<File Name="music" Hash="1226185224" Timestamp="1580665462"/>
+				<File Name="sfx" Hash="1613063707" Timestamp="1580665461"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="2800297591" Timestamp="1580661704"/>
+				<File Name="" Hash="3843116683" Timestamp="1580665462"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
@@ -46,13 +46,13 @@
 		<Banks>
 			<Language ID="393239870">
 				<File Name="Init" Hash="1557872255" Timestamp="1580636692"/>
-				<File Name="music" Hash="1580309629" Timestamp="1580661703"/>
-				<File Name="sfx" Hash="678864719" Timestamp="1580636353"/>
+				<File Name="music" Hash="1226185224" Timestamp="1580665461"/>
+				<File Name="sfx" Hash="1613063707" Timestamp="1580665461"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="529849253" Timestamp="1580661703"/>
+				<File Name="" Hash="1409493809" Timestamp="1580665461"/>
 			</Language>
 		</XMLInfo>
 	</Platform>

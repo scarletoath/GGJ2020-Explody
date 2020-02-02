@@ -43,10 +43,15 @@
 										</RTPC>
 									</RTPCList>
 								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{33A1E24E-D924-4E26-9989-35A78A2F113E}"/>
+									<ObjectRef Name="music" ID="{DF02E205-39E9-45BA-9C6B-B942ECA3302F}" WorkUnitID="{33A1E24E-D924-4E26-9989-35A78A2F113E}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="music" ID="{D92A3706-9E99-488F-9F76-03336D0EC065}" WorkUnitID="{E106BA0E-10FD-494F-90F3-8944F29456F3}"/>
@@ -92,7 +97,7 @@
 														<MusicClip Name="Arpesque" ID="{32E8398B-4300-4B4A-8FB0-092F1CBFAF9D}">
 															<PropertyList>
 																<Property Name="EndTrimOffset" Type="Real64" Value="22500"/>
-																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeInDuration" Type="Real64" Value="393.846153846154"/>
 																<Property Name="FadeOutDuration" Type="Real64" Value="492.307692307695"/>
 															</PropertyList>
 															<AudioSourceRef Name="Arpesque" ID="{06254791-85B4-46D2-BE20-8F32FCEC4E42}"/>
@@ -234,7 +239,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{33A1E24E-D924-4E26-9989-35A78A2F113E}"/>
+									<ObjectRef Name="music" ID="{DF02E205-39E9-45BA-9C6B-B942ECA3302F}" WorkUnitID="{33A1E24E-D924-4E26-9989-35A78A2F113E}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="music" ID="{D92A3706-9E99-488F-9F76-03336D0EC065}" WorkUnitID="{E106BA0E-10FD-494F-90F3-8944F29456F3}"/>
@@ -422,7 +427,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{33A1E24E-D924-4E26-9989-35A78A2F113E}"/>
+									<ObjectRef Name="music" ID="{DF02E205-39E9-45BA-9C6B-B942ECA3302F}" WorkUnitID="{33A1E24E-D924-4E26-9989-35A78A2F113E}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="music" ID="{D92A3706-9E99-488F-9F76-03336D0EC065}" WorkUnitID="{E106BA0E-10FD-494F-90F3-8944F29456F3}"/>
@@ -615,7 +620,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{33A1E24E-D924-4E26-9989-35A78A2F113E}"/>
+									<ObjectRef Name="music" ID="{DF02E205-39E9-45BA-9C6B-B942ECA3302F}" WorkUnitID="{33A1E24E-D924-4E26-9989-35A78A2F113E}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="music" ID="{D92A3706-9E99-488F-9F76-03336D0EC065}" WorkUnitID="{E106BA0E-10FD-494F-90F3-8944F29456F3}"/>
@@ -803,7 +808,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{33A1E24E-D924-4E26-9989-35A78A2F113E}"/>
+									<ObjectRef Name="music" ID="{DF02E205-39E9-45BA-9C6B-B942ECA3302F}" WorkUnitID="{33A1E24E-D924-4E26-9989-35A78A2F113E}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="music" ID="{D92A3706-9E99-488F-9F76-03336D0EC065}" WorkUnitID="{E106BA0E-10FD-494F-90F3-8944F29456F3}"/>
@@ -990,7 +995,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{33A1E24E-D924-4E26-9989-35A78A2F113E}"/>
+									<ObjectRef Name="music" ID="{DF02E205-39E9-45BA-9C6B-B942ECA3302F}" WorkUnitID="{33A1E24E-D924-4E26-9989-35A78A2F113E}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="music" ID="{D92A3706-9E99-488F-9F76-03336D0EC065}" WorkUnitID="{E106BA0E-10FD-494F-90F3-8944F29456F3}"/>
@@ -1178,7 +1183,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{33A1E24E-D924-4E26-9989-35A78A2F113E}"/>
+									<ObjectRef Name="music" ID="{DF02E205-39E9-45BA-9C6B-B942ECA3302F}" WorkUnitID="{33A1E24E-D924-4E26-9989-35A78A2F113E}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="music" ID="{D92A3706-9E99-488F-9F76-03336D0EC065}" WorkUnitID="{E106BA0E-10FD-494F-90F3-8944F29456F3}"/>
@@ -1364,7 +1369,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{33A1E24E-D924-4E26-9989-35A78A2F113E}"/>
+									<ObjectRef Name="music" ID="{DF02E205-39E9-45BA-9C6B-B942ECA3302F}" WorkUnitID="{33A1E24E-D924-4E26-9989-35A78A2F113E}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="music" ID="{D92A3706-9E99-488F-9F76-03336D0EC065}" WorkUnitID="{E106BA0E-10FD-494F-90F3-8944F29456F3}"/>

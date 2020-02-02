@@ -15,6 +15,17 @@
 			<ObjectPath>\SoundBanks\Default Work Unit\sfx</ObjectPath>
 			<ShortName>sfx</ShortName>
 			<Path>sfx.bnk</Path>
+			<IncludedEvents>
+				<Event Id="1054659462" Name="endLevel" ObjectPath="\Events\Default Work Unit\endLevel" DurationType="Infinite"/>
+				<Event Id="1837310473" Name="playAmb" ObjectPath="\Events\Default Work Unit\playAmb" DurationType="Infinite"/>
+				<Event Id="3086540886" Name="stopAll" ObjectPath="\Events\Default Work Unit\stopAll" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="202910255" Language="SFX">
+					<ShortName>Winds-DesertWind-Ext-VerySt.wav</ShortName>
+					<Path>SFX/Winds-DesertWind-Ext-VerySt_C9A636D4.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
 		</SoundBank>
 		<SoundBank Id="1355168291" Language="SFX">
 			<ObjectPath>Init</ObjectPath>
@@ -26,8 +37,15 @@
 			<ShortName>music</ShortName>
 			<Path>music.bnk</Path>
 			<IncludedEvents>
+				<Event Id="1808369568" Name="clickShardArp" ObjectPath="\Events\Default Work Unit\clickShardArp" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="4065971336" Name="clickShardBass" ObjectPath="\Events\Default Work Unit\clickShardBass" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3141704500" Name="clickShardCello" ObjectPath="\Events\Default Work Unit\clickShardCello" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2673103409" Name="clickShardMangled" ObjectPath="\Events\Default Work Unit\clickShardMangled" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="4241405248" Name="clickShardPizz" ObjectPath="\Events\Default Work Unit\clickShardPizz" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="596780413" Name="clickShardScrubs" ObjectPath="\Events\Default Work Unit\clickShardScrubs" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="4098476599" Name="clickShardSwells" ObjectPath="\Events\Default Work Unit\clickShardSwells" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="4093498252" Name="clickShardViola" ObjectPath="\Events\Default Work Unit\clickShardViola" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="182906760" Name="playExplosion" ObjectPath="\Events\Default Work Unit\playExplosion" DurationType="Infinite"/>
-				<Event Id="3086540886" Name="stopAll" ObjectPath="\Events\Default Work Unit\stopAll" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="127433965" Name="timeSlow" ObjectPath="\Events\Default Work Unit\timeSlow" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
