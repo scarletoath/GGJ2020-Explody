@@ -6,7 +6,7 @@ public class SnapToLocation : MonoBehaviour
 
     Vector3 originalLocation;
     Quaternion originalRotation;
-    bool lookForSnaps;
+    public bool lookForSnaps;
 
     bool positionIsFixed;
 

@@ -75,6 +75,15 @@ public class PlaybackManager : MonoBehaviour
                     if ( currentReplayStep >= totalRecordings ) {
                         Debug.Log( "Replay is done." );
                         state = RecordingState.WAIT;
+
+                        foreach ( KeyValuePair<GameObject, List<PieceData>> entry in recordings ) {
+                            GameObject piece = entry.Key;
+                            SnapToLocation loc = piece.GetComponent<SnapToLocation>();
+                            if( !loc.GetPositionIsFixed() ) {
+                                piece.SetActive( false );
+                            }
+                        }
+
                         break;
                     }
 
@@ -83,7 +92,7 @@ public class PlaybackManager : MonoBehaviour
                         PieceData curEntry = entry.Value[ currentReplayStep ];
                         PieceData prevEntry = entry.Value[ currentReplayStep - 1 ];
 
-                        if ( !prevEntry.bActive ) {
+                        if ( !curEntry.bActive ) {
                             piece.SetActive( false );
                             continue;
                         }
@@ -124,6 +133,10 @@ public class PlaybackManager : MonoBehaviour
                     rot = piece.transform.rotation,
                     bActive = piece.activeSelf
                 } );
+
+                if( !piece.activeSelf ) {
+                    Debug.Log( "GOTCHA!" );
+                }
             }
             totalRecordings++;
         }
@@ -136,10 +149,15 @@ public class PlaybackManager : MonoBehaviour
             GameObject piece = entry.Key;
             PieceData curEntry = entry.Value[ 0 ];
 
+            piece.GetComponent<SnapToLocation>().lookForSnaps = false;
+
             piece.transform.position = curEntry.pos;
             piece.transform.rotation = curEntry.rot;
-            piece.SetActive( true );
-            //piece.GetComponent<Renderer>().enabled = !GetComponent<Renderer>().enabled;
+            if( !piece.activeSelf ) {
+                piece.SetActive( true );
+                //PieceData lastEntry = entry.Value[ entry.Value.Count - 1 ];
+                //lastEntry.bActive = false;
+            }
         }
         state = RecordingState.REPLAY;
         frame = 0;
