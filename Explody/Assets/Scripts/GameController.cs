@@ -176,6 +176,7 @@ public class GameController : MonoBehaviour
     PlaybackManager playbackManager;
     bool bStarted = false;
     bool bReadyForReplay = false;
+	bool bReadyForGameplay = true;
     float timeLeft = 20.0f;
 
 	private readonly HashSet <SnapToLocation> snaps = new HashSet <SnapToLocation> ();
@@ -193,12 +194,15 @@ public class GameController : MonoBehaviour
         playbackManager = this.GetComponent<PlaybackManager>();
 		StarRating.gameObject.SetActive ( false );
 		ScoreDisplay.Hide ();
+		OnDisplayNextLevel();
 	}
 
     // Update is called once per frame
     void Update() {
-        if ( Input.GetKeyDown( KeyCode.Space ) ) {
-            if ( !bStarted && !bReadyForReplay ) { // TODO : remove readyForReplay check once states are in
+        if (Input.GetKeyDown(KeyCode.Space)) {
+			if ( bReadyForGameplay ) {
+				OnDisplayNextLevel();
+			} else if ( !bStarted && !bReadyForReplay ) { // TODO : remove readyForReplay check once states are in
                 OnStartNextLevel();
             } else if( bReadyForReplay ) {
                 //OnStartPlayback(); // TODO : Uncomment when ready to hook up
@@ -208,18 +212,24 @@ public class GameController : MonoBehaviour
         }
     }
 
-    public void OnStartNextLevel()
+	public void OnDisplayNextLevel()
+	{
+		Debug.Log("GameController::OnDisplayNextLevel() Called.");
+		StarRating.gameObject.SetActive(false);
+		ScoreDisplay.Hide();
+		snaps.Clear();
+		scoreTally.CreateSubScore();
+
+		levelManager.ClearLevel();
+		levelManager.SpawnNextLevel();
+		bReadyForGameplay = false;
+	}
+
+	public void OnStartNextLevel()
     {
         // Triggered when the player starts the level.
         // Trigger the playback manager to start recording.
         Debug.Log( "GameController::OnStartNextLevel() Called." );
-		StarRating.gameObject.SetActive ( false );
-		ScoreDisplay.Hide ();
-		snaps.Clear ();
-		scoreTally.CreateSubScore ();
-
-		levelManager.ClearLevel ();
-		levelManager.SpawnNextLevel ();
         Exploder.ExplodeAtThisPoint ();
 		TimeSlow.StartSlowDown ();
         playbackManager.StartRecording();
@@ -237,11 +247,12 @@ public class GameController : MonoBehaviour
 		StarRating.gameObject.SetActive ( true );
 		StarRating.SetRating ( Random.Range ( 0.29f , 1 ) , true ); // TODO : Get score in percent
 		ScoreDisplay.ShowScore ( scoreTally.LastScore );
-        bReadyForReplay = true;
+        //bReadyForReplay = true;
 		bStarted = false;
+		bReadyForGameplay = true;
 	}
 
-    public void OnStartPlayback()
+	public void OnStartPlayback()
     {
         // Triggered shortly after OnComplete (x seconds? or just when the player triggeres it manually?)
         // Trigger the playback manager to play back the recording.

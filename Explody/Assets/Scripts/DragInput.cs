@@ -13,6 +13,10 @@ public class DragInput : MonoBehaviour
 
     Vector2 draggedVelocity;
 
+    [SerializeField] float maxHoldTime;
+    float startHoldTime = -1;
+
+
     // Update is called once per frame
     void Update()
     {
@@ -22,11 +26,19 @@ public class DragInput : MonoBehaviour
             if (draggedObject.GetComponent<SnapToLocation>().GetPositionIsFixed())
             {
                 // snapped, let go
-                //draggedObject.gameObject.GetComponent<Rigidbody2D>().simulated = true;
-                //draggedObject.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-                //draggedObject.gameObject.GetComponent<Rigidbody2D>().AddForce(draggedVelocity * 50);
+                Debug.Log("Snapped");
                 draggedObject = null;
                 dragOffset = Vector3.zero;
+            }
+            else if (startHoldTime != -1 && (Time.time - startHoldTime) > maxHoldTime)
+            {
+                Debug.Log("Ran out of time");
+                draggedObject.gameObject.GetComponent<Rigidbody2D>().isKinematic = false;
+                draggedObject.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                draggedObject.gameObject.GetComponent<Rigidbody2D>().AddForce(draggedVelocity * 50);
+                draggedObject = null;
+                dragOffset = Vector3.zero;
+                startHoldTime = -1;
             }
             else
             {
@@ -63,16 +75,20 @@ public class DragInput : MonoBehaviour
                     dragOffset.z = 0;
                     draggedObject = hit.transform.gameObject;
                     draggedObject.gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
+                    startHoldTime = Time.time;
+                    // Wwise Audio Event
                 }
             }
         }
         else if (draggedObject != null)
         {
+            Debug.Log("Voluntarily let go");
             draggedObject.gameObject.GetComponent<Rigidbody2D>().isKinematic = false;
             draggedObject.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-            draggedObject.gameObject.GetComponent<Rigidbody2D>().AddForce(draggedVelocity * 50);
+            draggedObject.gameObject.GetComponent<Rigidbody2D>().AddForce(draggedVelocity * 70);
             draggedObject = null;
             dragOffset = Vector3.zero;
+            startHoldTime = -1;
         }
     }
 
@@ -80,4 +96,5 @@ public class DragInput : MonoBehaviour
     {
         rotationValue = rotationVal;
     }
+
 }
