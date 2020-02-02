@@ -5,6 +5,8 @@ using UnityEngine;
 public class DragInput : MonoBehaviour
 {
 
+    GameObject hoveredObject;
+
     GameObject draggedObject;
     Vector3 dragOffset;
 
@@ -12,6 +14,10 @@ public class DragInput : MonoBehaviour
     [SerializeField] float rotationSpeed;
 
     Vector2 draggedVelocity;
+
+    [SerializeField] float maxHoldTime;
+    float startHoldTime = -1;
+
 
     // Update is called once per frame
     void Update()
@@ -22,11 +28,19 @@ public class DragInput : MonoBehaviour
             if (draggedObject.GetComponent<SnapToLocation>().GetPositionIsFixed())
             {
                 // snapped, let go
-                //draggedObject.gameObject.GetComponent<Rigidbody2D>().simulated = true;
-                //draggedObject.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-                //draggedObject.gameObject.GetComponent<Rigidbody2D>().AddForce(draggedVelocity * 50);
+                Debug.Log("Snapped");
                 draggedObject = null;
                 dragOffset = Vector3.zero;
+            }
+            else if (startHoldTime != -1 && (Time.time - startHoldTime) > maxHoldTime)
+            {
+                Debug.Log("Ran out of time");
+                draggedObject.gameObject.GetComponent<Rigidbody2D>().isKinematic = false;
+                draggedObject.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                draggedObject.gameObject.GetComponent<Rigidbody2D>().AddForce(draggedVelocity * 50);
+                draggedObject = null;
+                dragOffset = Vector3.zero;
+                startHoldTime = -1;
             }
             else
             {
@@ -46,6 +60,18 @@ public class DragInput : MonoBehaviour
             }
         }
 
+        HandleHover();
+
+        if (hoveredObject != null && draggedObject == null)
+        {
+            if (rotationValue != 0)
+            {
+                Vector3 prevRot = hoveredObject.transform.rotation.eulerAngles;
+                prevRot.z += rotationValue * rotationSpeed;
+                hoveredObject.transform.rotation = Quaternion.Euler(prevRot);
+                rotationValue = 0;
+            }
+        }
     }
 
     public void HandleGrab(bool down)
@@ -63,21 +89,44 @@ public class DragInput : MonoBehaviour
                     dragOffset.z = 0;
                     draggedObject = hit.transform.gameObject;
                     draggedObject.gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
+                    startHoldTime = Time.time;
+                    // Wwise Audio Event
                 }
             }
         }
         else if (draggedObject != null)
         {
+            Debug.Log("Voluntarily let go");
             draggedObject.gameObject.GetComponent<Rigidbody2D>().isKinematic = false;
             draggedObject.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-            draggedObject.gameObject.GetComponent<Rigidbody2D>().AddForce(draggedVelocity * 50);
+            draggedObject.gameObject.GetComponent<Rigidbody2D>().AddForce(draggedVelocity * 70);
             draggedObject = null;
             dragOffset = Vector3.zero;
+            startHoldTime = -1;
         }
     }
 
-    public void HandleRotation(float rotationVal)
+    public void HandleHover()
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity);
+        if (hit)
+        {
+            if (hit.transform.CompareTag("Piece") && !hit.transform.gameObject.GetComponent<SnapToLocation>().GetPositionIsFixed()) // subject to change
+            {
+                hoveredObject =  hit.transform.gameObject;
+            }
+        }
+        else if ( hoveredObject != null )
+        {
+            hoveredObject = null;
+
+        }
+    }
+
+public void HandleRotation(float rotationVal)
     {
         rotationValue = rotationVal;
     }
+
 }

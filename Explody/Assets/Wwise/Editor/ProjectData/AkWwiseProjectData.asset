@@ -184,14 +184,14 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 0eba06e1fd104f4990f38944f29456f3
     GuidInternal: 
-    m_lastTime: -8586210196014775808
+    m_lastTime: -8586209704534775808
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks/Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 770ad0eed0cbda4f95a88e7cbd179bfa
     GuidInternal: 
-    m_lastTime: -8586210096284775808
+    m_lastTime: -8586209709854775808
     List:
     - name: music
       guid: 917c176678a2ed40827bbffa72226d49
@@ -216,8 +216,44 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 328ee677c01ed84cbabb69542bcbaeef
     GuidInternal: 
-    m_lastTime: -8586210196014775808
-    List: []
+    m_lastTime: -8586209710694775808
+    List:
+    - name: playMusic
+      guid: 55013984dee2de41b5576505a775a609
+      id: 417627684
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: playMusic
+        ObjectType: 3
+      Path: Default Work Unit/playMusic
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: stopAll
+      guid: 234cfb8f9e1eb54fb1c0e4b2a0053637
+      id: 3086540886
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: stopAll
+        ObjectType: 3
+      Path: Default Work Unit/stopAll
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: timeSlow
+      guid: 05c43274f0a0884588ddf086964235c3
+      id: 127433965
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: timeSlow
+        ObjectType: 3
+      Path: Default Work Unit/timeSlow
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   - PhysicalPath: Events/Factory Tencent GME.wwu
     ParentPhysicalPath: 
     guid: b1390e77527c2a44a4f7653ae6b0c847
@@ -277,8 +313,80 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 7f36c801904b074096f166d72827462e
     GuidInternal: 
-    m_lastTime: -8586210196014775808
-    List: []
+    m_lastTime: -8586209710124775808
+    List:
+    - name: timeSlowArpesque
+      guid: bf8cbefbe30ae44f8e9cefabfedce6a5
+      id: 899343179
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: timeSlowArpesque
+        ObjectType: 13
+      Path: Default Work Unit/timeSlowArpesque
+    - name: timeSlowBass
+      guid: eefb951e5d72cc4eb22b8de9dc9ac7ca
+      id: 849161288
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: timeSlowBass
+        ObjectType: 13
+      Path: Default Work Unit/timeSlowBass
+    - name: timeSlowCello
+      guid: 78142fa45e3a9b4d8c5177c2bcba0ad1
+      id: 2773636852
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: timeSlowCello
+        ObjectType: 13
+      Path: Default Work Unit/timeSlowCello
+    - name: timeSlowMangledCello
+      guid: f061d86aba1bf446a0b668431c6f2c72
+      id: 3196795824
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: timeSlowMangledCello
+        ObjectType: 13
+      Path: Default Work Unit/timeSlowMangledCello
+    - name: timeSlowPizzViolins
+      guid: 32ac2212bf18a748b5e036ceee61a95f
+      id: 1710287774
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: timeSlowPizzViolins
+        ObjectType: 13
+      Path: Default Work Unit/timeSlowPizzViolins
+    - name: timeSlowViola
+      guid: a0b580e897298e4fb011668a3a1300bb
+      id: 3766904140
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: timeSlowViola
+        ObjectType: 13
+      Path: Default Work Unit/timeSlowViola
+    - name: timeSlowViolinScrubs
+      guid: fd7ba2aa7c8a3a4f9d092982add088e2
+      id: 1218380486
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: timeSlowViolinScrubs
+        ObjectType: 13
+      Path: Default Work Unit/timeSlowViolinScrubs
+    - name: timeSlowViolinSwells
+      guid: 75ec83dec4190a4faaf7a9e3429575bd
+      id: 2514420612
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: timeSlowViolinSwells
+        ObjectType: 13
+      Path: Default Work Unit/timeSlowViolinSwells
   - PhysicalPath: Game Parameters/Factory Motion.wwu
     ParentPhysicalPath: 
     guid: 225213d7dbd1d042adc0930743567776
@@ -482,5 +590,7 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /PLODE
+  - /PLODE/SoundBanks
+  - /PLODE/SoundBanks/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
