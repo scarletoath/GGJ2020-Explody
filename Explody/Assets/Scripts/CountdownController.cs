@@ -100,7 +100,7 @@ public class CountdownController : MonoBehaviour
 			if ( !IsValid && countdownSizeFillImages.Count > 0 )
 			{
 				foreach ( var image in countdownSizeFillImages )
-					DestroyImmediate ( image );
+					DestroyImmediate ( image.gameObject );
 				countdownSizeFillImages.Clear ();
 			}
 		}

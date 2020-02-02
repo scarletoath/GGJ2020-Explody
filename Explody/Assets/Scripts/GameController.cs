@@ -15,21 +15,26 @@ public class GameController : MonoBehaviour
 		public float LastScore => Scores.Count > 0 ? Scores [ Scores.Count - 1 ] : -1;
 		public float this [ int Index ] => Index >= 0 && Index < Scores.Count ? Scores [ Index ] : -1;
 
+		private int SubCount;
+
 		public void Reset ()
 		{
 			Scores.Clear ();
+			SubCount = 0;
 		}
 
 		public void CreateSubScore ()
 		{
 			Scores.Add ( 0 );
+			SubCount = 0;
 			Debug.Log ( $"created sub score entry {Scores.Count}" );
 		}
 
 		public void AddSubScore ( float Score )
 		{
 			Debug.Assert ( Scores.Count > 0 );
-			Scores [ Scores.Count - 1 ] += Score;
+			float SubTotal = Scores [ Scores.Count - 1 ] * SubCount + Score;
+			Scores [ Scores.Count - 1 ] = SubTotal / ++SubCount;
 			Debug.Log ( $"add sub score {Score}, now {LastScore}" );
 		}
 
@@ -168,6 +173,7 @@ public class GameController : MonoBehaviour
 	[SerializeField] private TimeSlow TimeSlow;
 	[SerializeField] private StarRating StarRating;
 	[SerializeField] private ScoreDisplay ScoreDisplay;
+	[SerializeField] ParticleSystem InitialExplosionFx;
 
 	[Space] 
 	
@@ -210,6 +216,14 @@ public class GameController : MonoBehaviour
 					OnStartNextLevel ();
             }
         }
+        if ( Input.GetKeyDown( KeyCode.Escape ) ) {
+            ExitGame();
+        }
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 
 	public void OnDisplayNextLevel()
@@ -219,6 +233,7 @@ public class GameController : MonoBehaviour
 		ScoreDisplay.Hide();
 		snaps.Clear();
 		scoreTally.CreateSubScore();
+		// Wwise Audio Event @ekampa Level begin (after replay, before explosion)
 
 		levelManager.ClearLevel();
 		levelManager.SpawnNextLevel();
@@ -230,15 +245,9 @@ public class GameController : MonoBehaviour
         // Triggered when the player starts the level.
         // Trigger the playback manager to start recording.
         Debug.Log( "GameController::OnStartNextLevel() Called." );
-        Exploder.ExplodeAtThisPoint ();
-		TimeSlow.StartSlowDown ();
-
-        GameObject[] pieces = GameObject.FindGameObjectsWithTag( "Piece" );
-
-        playbackManager.ResetPlayback( pieces );
-        playbackManager.StartRecording();
-
+		AkSoundEngine.PostEvent("playExplosion", gameObject);
 		bStarted = true;
+		StartCoroutine(TriggerExplosionAfterSwell());
 	}
 
     public void OnComplete()
@@ -249,8 +258,8 @@ public class GameController : MonoBehaviour
 		TimeSlow.StopSlowDown ();
 		playbackManager.Wait();
         StarRating.gameObject.SetActive ( true );
-		StarRating.SetRating ( Random.Range ( 0.29f , 1 ) , true ); // TODO : Get score in percent
-		ScoreDisplay.ShowScore ( scoreTally.LastScore );
+		StarRating.SetRating ( scoreTally.LastScore , true );
+		ScoreDisplay.ShowScore ( scoreTally.LastScore * scoreTally.LastScore * 2500000 );
         bReadyForReplay = true;
         StartCoroutine( TriggerPlayback() );
         bStarted = false;
@@ -260,11 +269,24 @@ public class GameController : MonoBehaviour
     {
         if ( bReadyForReplay ) {
             yield return new WaitForSeconds( .5f );
-            playbackManager.StartPlayback();
+			// Wwise Audio Event @ekampa Play replay
+			playbackManager.StartPlayback();
         }
     }
 
-    public void OnStartPlayback()
+	System.Collections.IEnumerator TriggerExplosionAfterSwell()
+	{
+		yield return new WaitForSecondsRealtime(0.25f);
+		InitialExplosionFx.Play();
+		Exploder.ExplodeAtThisPoint();
+		TimeSlow.StartSlowDown();
+		GameObject[] pieces = GameObject.FindGameObjectsWithTag("Piece");
+		playbackManager.ResetPlayback(pieces);
+		playbackManager.StartRecording();
+	}
+
+
+	public void OnStartPlayback()
     {
         // Triggered shortly after OnComplete (x seconds? or just when the player triggeres it manually?)
         // Trigger the playback manager to play back the recording.
@@ -274,7 +296,8 @@ public class GameController : MonoBehaviour
 
     public void OnPlaybackDone()
     {
-        bReadyForGameplay = true;
+		// Wwise Audio Event @ekampa End of Replay
+		bReadyForGameplay = true;
     }
 
 	public void ShowMenu()

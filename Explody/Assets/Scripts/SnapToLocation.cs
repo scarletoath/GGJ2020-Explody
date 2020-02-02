@@ -28,7 +28,7 @@ public class SnapToLocation : MonoBehaviour
                 lookForSnaps = false;
                 positionIsFixed = true;
                 transform.position = originalLocation;
-                // Wwise Audio Event
+                // Wwise Audio Event @ekampa SNAP
                 CreateLockedInAchieved();
 				GameController.Instance.UnregisterSnap ( this );
 			}
@@ -64,9 +64,9 @@ public class SnapToLocation : MonoBehaviour
     {
         if(positionIsFixed)
         {
-            float rotationScore = Quaternion.Angle(transform.rotation, originalRotation);
+            float rotationScore = Quaternion.Angle(transform.rotation, originalRotation) / 180f;
             return (0.5f + (rotationScore * 0.5f));
-        }
+		}
         else
         {
             return 0;
