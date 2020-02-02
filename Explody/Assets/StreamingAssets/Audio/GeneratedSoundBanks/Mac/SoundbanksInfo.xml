@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="11" SoundbankVersion="134">
+	<RootPaths>
+		<ProjectRoot>/Users/ethankampa/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Studio 5-27A/ExternalProjects/GGJ-2020/PLODE/Explody/Sound/</ProjectRoot>
+		<SourceFilesRoot>/Users/ethankampa/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Studio 5-27A/ExternalProjects/GGJ-2020/PLODE/Explody/Sound/.cache/Mac/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/ethankampa/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Studio 5-27A/ExternalProjects/GGJ-2020/PLODE/Explody/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Mac/</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>/Users/ethankampa/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Studio 5-27A/ExternalProjects/GGJ-2020/PLODE/Explody/Sound/GeneratedSoundBanks/Mac</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="393239870" GUID="{55FD72C4-1CFA-4CDB-BD74-EF62C2B0A13C}" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\sfx</ObjectPath>
+			<ShortName>sfx</ShortName>
+			<Path>sfx.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="1355168291" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3991942870" GUID="{66177C91-A278-40ED-827B-BFFA72226D49}" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\music</ObjectPath>
+			<ShortName>music</ShortName>
+			<Path>music.bnk</Path>
+			<IncludedEvents>
+				<Event Id="417627684" Name="playMusic" ObjectPath="\Events\Default Work Unit\playMusic" GUID="{84390155-E2DE-41DE-B557-6505A775A609}" DurationType="Infinite"/>
+				<Event Id="3086540886" Name="stopAll" ObjectPath="\Events\Default Work Unit\stopAll" GUID="{8FFB4C23-1E9E-4FB5-B1C0-E4B2A0053637}" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="127433965" Name="timeSlow" ObjectPath="\Events\Default Work Unit\timeSlow" GUID="{7432C405-A0F0-4588-88DD-F086964235C3}" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="139739996" Language="SFX">
+					<ShortName>Cello.wav</ShortName>
+					<Path>SFX/Cello_F65F12A8.wem</Path>
+				</File>
+				<File Id="245964681" Language="SFX">
+					<ShortName>Bass.wav</ShortName>
+					<Path>SFX/Bass_F65F12A8.wem</Path>
+				</File>
+				<File Id="377995973" Language="SFX">
+					<ShortName>Viola.wav</ShortName>
+					<Path>SFX/Viola_F65F12A8.wem</Path>
+				</File>
+				<File Id="648564176" Language="SFX">
+					<ShortName>Mangled Cello.wav</ShortName>
+					<Path>SFX/Mangled Cello_F65F12A8.wem</Path>
+				</File>
+				<File Id="657020099" Language="SFX">
+					<ShortName>Pizz Violins.wav</ShortName>
+					<Path>SFX/Pizz Violins_F65F12A8.wem</Path>
+				</File>
+				<File Id="673673290" Language="SFX">
+					<ShortName>Violin Scrubs.wav</ShortName>
+					<Path>SFX/Violin Scrubs_F65F12A8.wem</Path>
+				</File>
+				<File Id="918818940" Language="SFX">
+					<ShortName>Violin Swells.wav</ShortName>
+					<Path>SFX/Violin Swells_F65F12A8.wem</Path>
+				</File>
+				<File Id="991299546" Language="SFX">
+					<ShortName>Arpesque.wav</ShortName>
+					<Path>SFX/Arpesque_F65F12A8.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
