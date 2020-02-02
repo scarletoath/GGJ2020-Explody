@@ -4,46 +4,53 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
+    public static GameController Instance { get; private set; }
+
     PlaybackManager playbackManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        playbackManager = new PlaybackManager();
-        playbackManager.Init();
+        if ( Instance == null ) {
+            Instance = this;
+        } else {
+            throw new System.Exception( "Cannot make multiple Game Controller Objects." );
+        }
+
+        playbackManager = gameObject.AddComponent<PlaybackManager>() as PlaybackManager;
     }
 
     // Update is called once per frame
     void Update()
     {
-        playbackManager.Update();
+        
     }
 
-    void OnStart()
+    public void OnStart()
     {
         // Triggered when the player starts the level.
         // Trigger the playback manager to start recording.
-        throw new System.NotImplementedException();
+        Debug.Log( "GameController::OnStart() Called." );
     }
 
-    void OnComplete()
+    public void OnComplete()
     {
         // Triggered when the player completes the level or runs out of time
         // Trigger the playback manager to stop recording.
-        throw new System.NotImplementedException();
+        Debug.Log( "GameController::OnComplete() Called." );
     }
 
-    void OnStartPlayback()
+    public void OnStartPlayback()
     {
         // Triggered shortly after OnComplete (x seconds? or just when the player triggeres it manually?)
         // Trigger the playback manager to play back the recording.
-        throw new System.NotImplementedException();
+        Debug.Log( "GameController::OnStartPlayback() Called." );
     }
 
-    void ShowMenu()
+    public void ShowMenu()
     {
         // Triggered by the player
         // Pauses the game
-        throw new System.NotImplementedException();
+        Debug.Log( "GameController::ShowMenu() Called." );
     }
 }

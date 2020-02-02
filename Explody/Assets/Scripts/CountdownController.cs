@@ -25,7 +25,7 @@ public class CountdownController : MonoBehaviour
       countdownTime--;
 	 }
      
-     //GameController.instance.OnComplete(); //Calls the game manager and all text will clear itself up on complete.
+     GameController.Instance.OnComplete(); //Calls the game manager and all text will clear itself up on complete.
 
      yield return new WaitForSeconds(1f);
 

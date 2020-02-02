@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlaybackManager
+public class PlaybackManager : MonoBehaviour
 {
     private struct PieceData
     {
@@ -30,7 +30,7 @@ public class PlaybackManager
     private int currentReplayStep = 0;
 
     // Start is called before the first frame update
-    public void Init()
+    void Start()
     {
         frame = 0;
         if ( pieces == null )
@@ -48,7 +48,7 @@ public class PlaybackManager
     }
 
     // Update is called once per frame
-    public void Update()
+    void Update()
     {
         switch( state )
         {
