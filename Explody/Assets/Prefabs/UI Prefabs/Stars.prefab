@@ -77,7 +77,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c2b8e9888876f646a697a4ab9789750, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FillSpeed: 1
+  FillSpeed: 1.5
   Stars:
   - FillImage: {fileID: 4294666212942121581}
     LimitEntries:
