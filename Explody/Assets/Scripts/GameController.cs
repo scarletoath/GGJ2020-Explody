@@ -40,6 +40,7 @@ public class GameController : MonoBehaviour
 	[SerializeField] private ExplodeAtPoint Exploder;
 	[SerializeField] private TimeSlow TimeSlow;
 	[SerializeField] private StarRating StarRating;
+	[SerializeField] private ScoreDisplay ScoreDisplay;
 
     PlaybackManager playbackManager;
     bool bStarted = false;
@@ -60,6 +61,7 @@ public class GameController : MonoBehaviour
 
         playbackManager = this.GetComponent<PlaybackManager>();
 		StarRating.gameObject.SetActive ( false );
+		ScoreDisplay.Hide ();
 	}
 
     // Update is called once per frame
@@ -79,6 +81,8 @@ public class GameController : MonoBehaviour
         // Triggered when the player starts the level.
         // Trigger the playback manager to start recording.
         Debug.Log( "GameController::OnStart() Called." );
+		StarRating.gameObject.SetActive ( false );
+		ScoreDisplay.Hide ();
 		snaps.Clear ();
 		scoreTally.CreateSubScore ();
         Exploder.ExplodeAtThisPoint ();
@@ -95,6 +99,7 @@ public class GameController : MonoBehaviour
 		playbackManager.Wait();
 		StarRating.gameObject.SetActive ( true );
 		StarRating.SetRating ( Random.Range ( 0.29f , 1 ) , true ); // TODO : Get score in percent
+		ScoreDisplay.ShowScore ( scoreTally.LastScore );
         bReadyForReplay = true;
     }
 

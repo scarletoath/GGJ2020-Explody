@@ -511,6 +511,11 @@ PrefabInstance:
       propertyPath: StarRating
       value: 
       objectReference: {fileID: 405824451}
+    - target: {fileID: 995737547242220511, guid: 74af8bfdac6942445b245783fbd6a9d9,
+        type: 3}
+      propertyPath: ScoreDisplay
+      value: 
+      objectReference: {fileID: 7968135891541991685}
     - target: {fileID: 1125842290988815263, guid: 74af8bfdac6942445b245783fbd6a9d9,
         type: 3}
       propertyPath: Camera
@@ -814,12 +819,12 @@ PrefabInstance:
     - target: {fileID: 5790522393348721022, guid: 843678ac3e719474c9dd5afe0b4d7ff0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.55
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5790522393348721022, guid: 843678ac3e719474c9dd5afe0b4d7ff0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.09
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5790522393348721022, guid: 843678ac3e719474c9dd5afe0b4d7ff0,
         type: 3}
@@ -1499,6 +1504,11 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 8942189708905829197, guid: ef2790059da1fd446a409b54f0430d1f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef2790059da1fd446a409b54f0430d1f, type: 3}
 --- !u!114 &7968135891541991684 stripped
@@ -1511,5 +1521,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1abf76e79eb5dca47b52c38efed4341f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7968135891541991685 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 908919284264212332, guid: ef2790059da1fd446a409b54f0430d1f,
+    type: 3}
+  m_PrefabInstance: {fileID: 7968135891541991683}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6437be3c9b8cdc74fb9440c658e3a16d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
