@@ -28,7 +28,7 @@ public class SnapToLocation : MonoBehaviour
                 lookForSnaps = false;
                 positionIsFixed = true;
                 transform.position = originalLocation;
-                // Wwise Audio Event @ekampa SNAP
+                AkSoundEngine.PostEvent("playSnap", gameObject);// Wwise Audio Event @ekampa SNAP
                 CreateLockedInAchieved();
 				GameController.Instance.UnregisterSnap ( this );
 			}

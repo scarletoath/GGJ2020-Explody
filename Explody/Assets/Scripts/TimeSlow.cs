@@ -14,6 +14,7 @@ public class TimeSlow : MonoBehaviour
 
     float originalTimeScale;
     float startTime = -1;
+    bool playedSound;
 
 	[Serializable] private class FloatEvent : UnityEvent <float> {}
 
@@ -22,6 +23,7 @@ public class TimeSlow : MonoBehaviour
 	// Start is called before the first frame update
     void Start()
     {
+        playedSound = false;
         originalTimeScale = Time.timeScale;
     }
 
@@ -45,6 +47,11 @@ public class TimeSlow : MonoBehaviour
             }
             else if ( elapsedRealTime < initialSlowTime + timeToSlow) // maintain slow
             {
+                if(!playedSound)
+                {
+                    AkSoundEngine.PostEvent("timeSlow", gameObject);
+                    playedSound = true;
+                }
                 Time.timeScale = targetTimeScale;
             }
             else if ( elapsedRealTime < initialSlowTime + timeToSlow + unSlowTime) // transition to original
@@ -71,6 +78,7 @@ public class TimeSlow : MonoBehaviour
 	public void StopSlowDown ()
 	{
 		startTime = -1;
+        playedSound = false;
 		Time.timeScale = originalTimeScale;
 		OnRealTimeElapsed.Invoke ( -1 );
 	}

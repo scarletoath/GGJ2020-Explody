@@ -91,6 +91,7 @@ public class DragInput : MonoBehaviour
                     draggedObject.gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
                     startHoldTime = Time.time;
                     // Wwise Audio Event
+                    PlayRandomSFX ();
                 }
             }
         }
@@ -127,6 +128,22 @@ public class DragInput : MonoBehaviour
 public void HandleRotation(float rotationVal)
     {
         rotationValue = rotationVal;
+    }
+
+public void PlayRandomSFX()
+    {
+        string[] eventNames =
+        {
+            "clickShardArp",
+            "clickShardBass",
+            "ClickShardCello",
+            "ClickShardMangled",
+            "ClickShardPizz",
+            "ClickShardScrubs",
+            "ClickShardSwells",
+            "ClickShardViola"
+        };
+        AkSoundEngine.PostEvent(eventNames[Random.Range(0, eventNames.Length)], gameObject);
     }
 
 }

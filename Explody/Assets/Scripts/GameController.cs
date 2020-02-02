@@ -233,7 +233,7 @@ public class GameController : MonoBehaviour
 		ScoreDisplay.Hide();
 		snaps.Clear();
 		scoreTally.CreateSubScore();
-		// Wwise Audio Event @ekampa Level begin (after replay, before explosion)
+		AkSoundEngine.PostEvent("playLevelEnd", gameObject);// Wwise Audio Event @ekampa Level begin (after replay, before explosion)
 
 		levelManager.ClearLevel();
 		levelManager.SpawnNextLevel();
@@ -269,7 +269,7 @@ public class GameController : MonoBehaviour
     {
         if ( bReadyForReplay ) {
             yield return new WaitForSeconds( .5f );
-			// Wwise Audio Event @ekampa Play replay
+			AkSoundEngine.PostEvent("playReplay", gameObject);// Wwise Audio Event @ekampa Play replay
 			playbackManager.StartPlayback();
         }
     }
@@ -296,7 +296,8 @@ public class GameController : MonoBehaviour
 
     public void OnPlaybackDone()
     {
-		// Wwise Audio Event @ekampa End of Replay
+		AkSoundEngine.PostEvent("playReplayEnd", gameObject);// Wwise Audio Event @ekampa End of Replay
+		Debug.Log( "Wwise end replay" );
 		bReadyForGameplay = true;
     }
 
