@@ -63,9 +63,9 @@ public class SnapToLocation : MonoBehaviour
     public float GetScore()
     {
         if(positionIsFixed)
-        {
-            float rotationScore = 180.0f - Quaternion.Angle(transform.rotation, originalRotation) / 180f;
-            return (0.5f + (rotationScore * 0.5f));
+		{
+			float rotationScore = 1 - Mathf.Abs ( Quaternion.Angle ( transform.rotation , originalRotation ) ) / 180f;
+			return (0.5f + (rotationScore * 0.5f));
 		}
         else
         {
