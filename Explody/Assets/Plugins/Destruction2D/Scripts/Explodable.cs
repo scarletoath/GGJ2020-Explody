@@ -69,7 +69,7 @@ public class Explodable : MonoBehaviour
 		if (fragments.Count > 0)
         {
             var renderer = gameObject.GetComponent<SpriteRenderer>();
-            var colider = gameObject.GetComponent<BoxCollider2D>();
+            var colider = gameObject.GetComponent<Collider2D>();
 
 			renderer.enabled = false;
 			colider.enabled = false;
@@ -128,7 +128,7 @@ public class Explodable : MonoBehaviour
 	private void resetSingle ()
 	{
 		var renderer = gameObject.GetComponent<SpriteRenderer> ();
-		var colider = gameObject.GetComponent<BoxCollider2D> ();
+		var colider = gameObject.GetComponent<Collider2D> ();
 
 		renderer.enabled = true;
 		colider.enabled = true;
