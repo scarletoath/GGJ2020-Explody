@@ -1,10 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
     public static GameController Instance { get; private set; }
+
+	[SerializeField] private ExplodeAtPoint Exploder;
 
     PlaybackManager playbackManager;
     bool bStarted = false;
@@ -40,8 +40,7 @@ public class GameController : MonoBehaviour
         // Triggered when the player starts the level.
         // Trigger the playback manager to start recording.
         Debug.Log( "GameController::OnStart() Called." );
-        Eruption boom = GameObject.Find( "EruptionCenter" ).GetComponent<Eruption>();
-        boom.StartEruption();
+        Exploder.ExplodeAtThisPoint ();
         playbackManager.StartRecording();
     }
 
