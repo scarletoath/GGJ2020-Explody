@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,7 +10,7 @@ public class CountdownController : MonoBehaviour
     //Start the coroutine for the timer
     private void Start()
     {
-        StartCoroutine(CountdownToStart());
+        //StartCoroutine(CountdownToStart());
     }
 
     IEnumerator CountdownToStart()
@@ -31,4 +30,10 @@ public class CountdownController : MonoBehaviour
 
      //countdownDisplay.gameObject.setAQctive(false);
     }
+
+	public void SetElapsedRealTime ( float ElapsedRealTime )
+	{
+		countdownDisplay.text = $"{countdownTime - ElapsedRealTime:F0}";
+	}
+
 }

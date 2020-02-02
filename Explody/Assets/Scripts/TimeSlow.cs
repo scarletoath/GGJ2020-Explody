@@ -1,22 +1,25 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TimeSlow : MonoBehaviour
 {
-    [SerializeField] float initialSlowTime;
+    [SerializeField] float initialSlowTime; // duration - transition to slow
 
-    [SerializeField] float timeToSlow;
+    [SerializeField] float timeToSlow; // duration - maintain slow
 
-    [SerializeField] float targetTimeScale;
+    [SerializeField] float targetTimeScale; // timescale when slow
 
-    [SerializeField] float unSlowTime;
+    [SerializeField] float unSlowTime; // duration - transition to original
 
     float originalTimeScale;
     float startTime = -1;
 
+	[Serializable] private class FloatEvent : UnityEvent <float> {}
 
-    // Start is called before the first frame update
+	[SerializeField] private FloatEvent OnRealTimeElapsed;
+
+	// Start is called before the first frame update
     void Start()
     {
         originalTimeScale = Time.timeScale;
@@ -30,36 +33,38 @@ public class TimeSlow : MonoBehaviour
         //    startTime = Time.time;
         //}
 
+		// [ initialSlowTime -> timeToSlow -> unSlowTime -> (end) ]
         if (startTime > 0)
         {
             // time is being slowed
-            float timeSinceStart = Time.time - startTime;
-            if (timeSinceStart < initialSlowTime)
+			float currentRealTime = Time.realtimeSinceStartup;
+            float elapsedRealTime = currentRealTime - startTime;
+            if (elapsedRealTime < initialSlowTime) // transition to slow
             {
-                // lerp to target
-                Time.timeScale = Mathf.Lerp(originalTimeScale, targetTimeScale, (timeSinceStart) / (initialSlowTime));
+                Time.timeScale = Mathf.Lerp(originalTimeScale, targetTimeScale, elapsedRealTime / initialSlowTime);
             }
-            else if (Time.time - startTime < initialSlowTime + timeToSlow)
+            else if ( elapsedRealTime < initialSlowTime + timeToSlow) // maintain slow
             {
                 Time.timeScale = targetTimeScale;
             }
-            else if (Time.time - startTime < (initialSlowTime + timeToSlow + unSlowTime))
+            else if ( elapsedRealTime < initialSlowTime + timeToSlow + unSlowTime) // transition to original
             {
-                // lerp to target
-                Time.timeScale = Mathf.Lerp(targetTimeScale, originalTimeScale, (timeSinceStart) / (initialSlowTime + timeToSlow + unSlowTime));
+                Time.timeScale = Mathf.Lerp(targetTimeScale, originalTimeScale, elapsedRealTime / (initialSlowTime + timeToSlow + unSlowTime));
             }
-            else
+            else // end
             {
                 Debug.Log( "TIME'S UP" );
                 GameController.Instance.OnComplete();
                 Time.timeScale = originalTimeScale;
                 startTime = -1;
             }
-        }
+
+			OnRealTimeElapsed.Invoke ( elapsedRealTime );
+		}
     }
 
     public void StartSlowDown()
     {
-        startTime = Time.time;
+        startTime = Time.realtimeSinceStartup;
     }
 }
