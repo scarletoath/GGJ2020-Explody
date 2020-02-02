@@ -277,7 +277,7 @@ public class GameController : MonoBehaviour
 	System.Collections.IEnumerator TriggerExplosionAfterSwell()
 	{
 		yield return new WaitForSecondsRealtime(0.25f);
-		InitialExplosionFx.Play();
+		Instantiate ( InitialExplosionFx ).Play ();
 		Exploder.ExplodeAtThisPoint();
 		TimeSlow.StartSlowDown();
 		GameObject[] pieces = GameObject.FindGameObjectsWithTag("Piece");
