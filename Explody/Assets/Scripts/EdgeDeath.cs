@@ -29,7 +29,7 @@ public class EdgeDeath : MonoBehaviour
 		}
 
 		yield return new WaitForSecondsRealtime ( fxLifetime );
-		Destroy ( fxInstance );
+		Destroy ( fxInstance.gameObject );
 	}
 
 }
