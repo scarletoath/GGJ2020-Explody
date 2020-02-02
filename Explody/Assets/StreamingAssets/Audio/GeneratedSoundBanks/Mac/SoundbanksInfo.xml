@@ -16,14 +16,18 @@
 			<ShortName>sfx</ShortName>
 			<Path>sfx.bnk</Path>
 			<IncludedEvents>
-				<Event Id="1054659462" Name="endLevel" ObjectPath="\Events\Default Work Unit\endLevel" DurationType="Infinite"/>
-				<Event Id="1837310473" Name="playAmb" ObjectPath="\Events\Default Work Unit\playAmb" DurationType="Infinite"/>
-				<Event Id="3086540886" Name="stopAll" ObjectPath="\Events\Default Work Unit\stopAll" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3860608094" Name="playLevelEnd" ObjectPath="\Events\Default Work Unit\playLevelEnd" DurationType="Infinite"/>
+				<Event Id="3714850613" Name="playLevelStart" ObjectPath="\Events\Default Work Unit\playLevelStart" DurationType="Infinite"/>
+				<Event Id="978238807" Name="playSnap" ObjectPath="\Events\Default Work Unit\playSnap" DurationType="OneShot" DurationMin="0.291667" DurationMax="0.291667"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="202910255" Language="SFX">
 					<ShortName>Winds-DesertWind-Ext-VerySt.wav</ShortName>
 					<Path>SFX/Winds-DesertWind-Ext-VerySt_C9A636D4.wem</Path>
+				</File>
+				<File Id="213899557" Language="SFX">
+					<ShortName>Retrologue 01-02.wav</ShortName>
+					<Path>SFX/Retrologue 01-02_6CE08E17.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
@@ -37,21 +41,27 @@
 			<ShortName>music</ShortName>
 			<Path>music.bnk</Path>
 			<IncludedEvents>
-				<Event Id="1808369568" Name="clickShardArp" ObjectPath="\Events\Default Work Unit\clickShardArp" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="4065971336" Name="clickShardBass" ObjectPath="\Events\Default Work Unit\clickShardBass" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="3141704500" Name="clickShardCello" ObjectPath="\Events\Default Work Unit\clickShardCello" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="2673103409" Name="clickShardMangled" ObjectPath="\Events\Default Work Unit\clickShardMangled" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="4241405248" Name="clickShardPizz" ObjectPath="\Events\Default Work Unit\clickShardPizz" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="596780413" Name="clickShardScrubs" ObjectPath="\Events\Default Work Unit\clickShardScrubs" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="4098476599" Name="clickShardSwells" ObjectPath="\Events\Default Work Unit\clickShardSwells" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="4093498252" Name="clickShardViola" ObjectPath="\Events\Default Work Unit\clickShardViola" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="182906760" Name="playExplosion" ObjectPath="\Events\Default Work Unit\playExplosion" DurationType="Infinite"/>
-				<Event Id="127433965" Name="timeSlow" ObjectPath="\Events\Default Work Unit\timeSlow" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1808369568" Name="clickShardArp" ObjectPath="\Events\Default Work Unit\music\clickShardArp" DurationType="OneShot" DurationMin="0.164062" DurationMax="0.164062"/>
+				<Event Id="4065971336" Name="clickShardBass" ObjectPath="\Events\Default Work Unit\music\clickShardBass" DurationType="OneShot" DurationMin="0.164062" DurationMax="0.164062"/>
+				<Event Id="3141704500" Name="clickShardCello" ObjectPath="\Events\Default Work Unit\music\clickShardCello" DurationType="OneShot" DurationMin="0.164062" DurationMax="0.164062"/>
+				<Event Id="2673103409" Name="clickShardMangled" ObjectPath="\Events\Default Work Unit\music\clickShardMangled" DurationType="OneShot" DurationMin="0.164062" DurationMax="0.164062"/>
+				<Event Id="4241405248" Name="clickShardPizz" ObjectPath="\Events\Default Work Unit\music\clickShardPizz" DurationType="OneShot" DurationMin="0.164062" DurationMax="0.164062"/>
+				<Event Id="596780413" Name="clickShardScrubs" ObjectPath="\Events\Default Work Unit\music\clickShardScrubs" DurationType="OneShot" DurationMin="0.164062" DurationMax="0.164062"/>
+				<Event Id="4098476599" Name="clickShardSwells" ObjectPath="\Events\Default Work Unit\music\clickShardSwells" DurationType="OneShot" DurationMin="0.164062" DurationMax="0.164062"/>
+				<Event Id="4093498252" Name="clickShardViola" ObjectPath="\Events\Default Work Unit\music\clickShardViola" DurationType="OneShot" DurationMin="0.164062" DurationMax="0.164062"/>
+				<Event Id="182906760" Name="playExplosion" ObjectPath="\Events\Default Work Unit\music\playExplosion" DurationType="Infinite"/>
+				<Event Id="997151998" Name="playReplay" ObjectPath="\Events\Default Work Unit\music\playReplay" DurationType="Infinite"/>
+				<Event Id="905755037" Name="playReplayEnd" ObjectPath="\Events\Default Work Unit\music\playReplayEnd" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2301652195" Name="playTimeSlow" ObjectPath="\Events\Default Work Unit\music\playTimeSlow" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="139739996" Language="SFX">
 					<ShortName>Cello.wav</ShortName>
 					<Path>SFX/Cello_F65F12A8.wem</Path>
+				</File>
+				<File Id="154507257" Language="SFX">
+					<ShortName>Fast Mix.wav</ShortName>
+					<Path>SFX/Fast Mix_F65F12A8.wem</Path>
 				</File>
 				<File Id="245964681" Language="SFX">
 					<ShortName>Bass.wav</ShortName>
@@ -60,6 +70,10 @@
 				<File Id="377995973" Language="SFX">
 					<ShortName>Viola.wav</ShortName>
 					<Path>SFX/Viola_F65F12A8.wem</Path>
+				</File>
+				<File Id="408514681" Language="SFX">
+					<ShortName>Retrologue 01-03.wav</ShortName>
+					<Path>SFX/Retrologue 01-03_BE1A54A6.wem</Path>
 				</File>
 				<File Id="516908577" Language="SFX">
 					<ShortName>Weapons-FlashBangGrenade-Me.wav</ShortName>

@@ -21,11 +21,13 @@ namespace AK
         static const AkUniqueID CLICKSHARDSCRUBS = 596780413U;
         static const AkUniqueID CLICKSHARDSWELLS = 4098476599U;
         static const AkUniqueID CLICKSHARDVIOLA = 4093498252U;
-        static const AkUniqueID ENDLEVEL = 1054659462U;
-        static const AkUniqueID PLAYAMB = 1837310473U;
         static const AkUniqueID PLAYEXPLOSION = 182906760U;
-        static const AkUniqueID STOPALL = 3086540886U;
-        static const AkUniqueID TIMESLOW = 127433965U;
+        static const AkUniqueID PLAYLEVELEND = 3860608094U;
+        static const AkUniqueID PLAYLEVELSTART = 3714850613U;
+        static const AkUniqueID PLAYREPLAY = 997151998U;
+        static const AkUniqueID PLAYREPLAYEND = 905755037U;
+        static const AkUniqueID PLAYSNAP = 978238807U;
+        static const AkUniqueID PLAYTIMESLOW = 2301652195U;
     } // namespace EVENTS
 
     namespace GAME_PARAMETERS

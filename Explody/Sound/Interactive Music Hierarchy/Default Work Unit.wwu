@@ -1523,6 +1523,105 @@
 								</MusicPlaylistItem>
 							</Playlist>
 						</MusicPlaylistContainer>
+						<MusicPlaylistContainer Name="replay" ID="{80D6BA00-EAA5-493E-874A-1DAA1FB35684}" ShortID="21994322">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{33A1E24E-D924-4E26-9989-35A78A2F113E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E106BA0E-10FD-494F-90F3-8944F29456F3}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicSegment Name="Fast Mix" ID="{8AA70052-7A2E-41AA-8854-97DDDD393BB6}" ShortID="770557808">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="12000"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{33A1E24E-D924-4E26-9989-35A78A2F113E}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E106BA0E-10FD-494F-90F3-8944F29456F3}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="Fast Mix" ID="{7B243F72-BEC9-4587-873F-97A70AF16EB0}" ShortID="953563954">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E106BA0E-10FD-494F-90F3-8944F29456F3}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Fast Mix" ID="{938593A1-419A-40E4-9049-08A3CE32C007}" ShortID="154507257">
+													<Language>SFX</Language>
+													<AudioFile>Fast Mix.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{FEBE63E9-3C26-4164-B34A-0F85E3F37BCB}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{8DD60B55-4002-47E2-8802-F451C8CB6663}">
+													<ClipList>
+														<MusicClip Name="Fast Mix" ID="{DFDDCC98-EDC7-480A-9525-C83D4EEF017B}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="12000"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="Fast Mix" ID="{938593A1-419A-40E4-9049-08A3CE32C007}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+									</ChildrenList>
+									<CueList>
+										<MusicCue Name="Entry Cue" ID="{CEB79B7B-10FA-4B9B-AEBE-9946134B0BEE}"/>
+										<MusicCue Name="Exit Cue" ID="{B8E082AE-45F1-419F-8D41-D58B7F7CEED3}">
+											<PropertyList>
+												<Property Name="CueType" Type="int16" Value="1"/>
+												<Property Name="TimeMs" Type="Real64" Value="12000"/>
+											</PropertyList>
+										</MusicCue>
+									</CueList>
+								</MusicSegment>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{F60CAA73-2BAD-4558-896B-CE1C0C231F47}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{681C9671-BADF-4A04-B458-DBA0D9C31186}">
+											<TransitionInfo/>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<Playlist>
+								<MusicPlaylistItem Name="" ID="{3F916960-8798-449C-8FD1-F62CC84616A6}" ShortID="218712808">
+									<PropertyList>
+										<Property Name="LoopCount" Type="int16" Value="0"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicPlaylistItem Name="" ID="{D4D7C7EE-CC0E-4F97-9655-7E9F99894F3A}" ShortID="268405912">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<SegmentRef Name="Fast Mix" ID="{8AA70052-7A2E-41AA-8854-97DDDD393BB6}"/>
+										</MusicPlaylistItem>
+									</ChildrenList>
+								</MusicPlaylistItem>
+							</Playlist>
+						</MusicPlaylistContainer>
 					</ChildrenList>
 					<TransitionList>
 						<MusicTransition Name="Root" ID="{2E160E21-4B44-4A67-BAA0-0CA7AEAFC6E7}">

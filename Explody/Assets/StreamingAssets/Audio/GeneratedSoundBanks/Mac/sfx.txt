@@ -1,8 +1,9 @@
 Event	ID	Name			Wwise Object Path	Notes
-	1054659462	endLevel			\Default Work Unit\endLevel	
-	1837310473	playAmb			\Default Work Unit\playAmb	
-	3086540886	stopAll			\Default Work Unit\stopAll	
+	978238807	playSnap			\Default Work Unit\playSnap	
+	3714850613	playLevelStart			\Default Work Unit\playLevelStart	
+	3860608094	playLevelEnd			\Default Work Unit\playLevelEnd	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	202910255	ambience	Y:\Studio 5-27A\ExternalProjects\GGJ-2020\PLODE\Explody\Sound\.cache\Mac\SFX\Winds-DesertWind-Ext-VerySt_C9A636D4.wem		\Actor-Mixer Hierarchy\Default Work Unit\sfx\ambience		1250361
+	213899557	snap	Y:\Studio 5-27A\ExternalProjects\GGJ-2020\PLODE\Explody\Sound\.cache\Mac\SFX\Retrologue 01-02_6CE08E17.wem		\Actor-Mixer Hierarchy\Default Work Unit\ui\snap		513
 

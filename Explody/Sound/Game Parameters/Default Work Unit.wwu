@@ -6,7 +6,7 @@
 				<GameParameter Name="timeSlowArpesque" ID="{FBBE8CBF-0AE3-4FE4-8E9C-EFABFEDCE6A5}">
 					<PropertyList>
 						<Property Name="FilterTimeDown" Type="Real64" Value="6"/>
-						<Property Name="FilterTimeUp" Type="Real64" Value="4"/>
+						<Property Name="FilterTimeUp" Type="Real64" Value="2"/>
 						<Property Name="InitialValue" Type="Real64" Value="0"/>
 						<Property Name="Max" Type="Real64" Value="1"/>
 						<Property Name="RTPCRamping" Type="int16" Value="2"/>
@@ -78,7 +78,7 @@
 				<GameParameter Name="timeSlow" ID="{2A4A09F0-BC6E-404B-BD25-7377E0788C5C}">
 					<PropertyList>
 						<Property Name="FilterTimeDown" Type="Real64" Value="6"/>
-						<Property Name="FilterTimeUp" Type="Real64" Value="1"/>
+						<Property Name="FilterTimeUp" Type="Real64" Value="4"/>
 						<Property Name="InitialValue" Type="Real64" Value="0"/>
 						<Property Name="Max" Type="Real64" Value="1"/>
 						<Property Name="RTPCRamping" Type="int16" Value="2"/>

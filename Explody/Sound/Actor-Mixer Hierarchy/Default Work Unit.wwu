@@ -50,6 +50,11 @@
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 										<Property Name="TrimBegin" Type="Real64" Value="7.59183333333333"/>
 										<Property Name="TrimEnd" Type="Real64" Value="8.66916666666666"/>
+										<Property Name="VolumeOffset" Type="Real64">
+											<ValueList>
+												<Value>2</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>Weapons-FlashBangGrenade-Me.wav</AudioFile>
@@ -98,7 +103,7 @@
 				</Folder>
 				<Folder Name="ui" ID="{B5906B80-4FEE-48D2-85C4-4D197BD4D471}" ShortID="183993682">
 					<ChildrenList>
-						<Sound Name="click" ID="{6C91800F-92B1-4E48-A5DE-8D6124443A60}" ShortID="131535552">
+						<Sound Name="snap" ID="{6C91800F-92B1-4E48-A5DE-8D6124443A60}" ShortID="131535552">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="sfx" ID="{ADC073F6-406F-43B1-83B6-F6B0C9CD20B2}" WorkUnitID="{33A1E24E-D924-4E26-9989-35A78A2F113E}"/>
@@ -107,6 +112,54 @@
 									<ObjectRef Name="sfx" ID="{8072466E-CD5F-4177-86B2-F9BC42FC9CCA}" WorkUnitID="{E106BA0E-10FD-494F-90F3-8944F29456F3}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Retrologue 01-02" ID="{E24E7BF8-B74B-4350-873E-C06518550CCA}" ShortID="213899557">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.291666666666667"/>
+										<Property Name="VolumeOffset" Type="Real64">
+											<ValueList>
+												<Value>12</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Retrologue 01-02.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Retrologue 01-02" ID="{E24E7BF8-B74B-4350-873E-C06518550CCA}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="click" ID="{BC5206DC-186B-41BB-8184-17A1D40B158E}" ShortID="1042434523">
+							<PropertyList>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>45</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="sfx" ID="{ADC073F6-406F-43B1-83B6-F6B0C9CD20B2}" WorkUnitID="{33A1E24E-D924-4E26-9989-35A78A2F113E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="sfx" ID="{8072466E-CD5F-4177-86B2-F9BC42FC9CCA}" WorkUnitID="{E106BA0E-10FD-494F-90F3-8944F29456F3}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Retrologue 01-03" ID="{1807020F-03E6-4FAD-9376-085FC4F1A173}" ShortID="408514681">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.164062500000001"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Retrologue 01-03.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Retrologue 01-03" ID="{1807020F-03E6-4FAD-9376-085FC4F1A173}" Platform="Linked"/>
+							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
 				</Folder>

@@ -5,25 +5,16 @@
 			<ChildrenList>
 				<SoundBank Name="sfx" ID="{55FD72C4-1CFA-4CDB-BD74-EF62C2B0A13C}">
 					<ObjectInclusionList>
-						<ObjectRef Name="endLevel" ID="{B7B994F0-A318-4030-BF37-74A31AC31750}" WorkUnitID="{77E68E32-1EC0-4CD8-BABB-69542BCBAEEF}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="playAmb" ID="{B2046068-FA5D-4835-A72F-D00D24D94273}" WorkUnitID="{77E68E32-1EC0-4CD8-BABB-69542BCBAEEF}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="stopAll" ID="{8FFB4C23-1E9E-4FB5-B1C0-E4B2A0053637}" WorkUnitID="{77E68E32-1EC0-4CD8-BABB-69542BCBAEEF}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="playLevelEnd" ID="{B7B994F0-A318-4030-BF37-74A31AC31750}" WorkUnitID="{77E68E32-1EC0-4CD8-BABB-69542BCBAEEF}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="playSnap" ID="{9534F885-5980-448D-BC41-852BC3FC3C66}" WorkUnitID="{77E68E32-1EC0-4CD8-BABB-69542BCBAEEF}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="playLevelStart" ID="{B2046068-FA5D-4835-A72F-D00D24D94273}" WorkUnitID="{77E68E32-1EC0-4CD8-BABB-69542BCBAEEF}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
 				<SoundBank Name="music" ID="{66177C91-A278-40ED-827B-BFFA72226D49}">
 					<ObjectInclusionList>
-						<ObjectRef Name="clickShardPizz" ID="{C156D445-EF7A-4027-8E22-48B0D190A444}" WorkUnitID="{77E68E32-1EC0-4CD8-BABB-69542BCBAEEF}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="playExplosion" ID="{84390155-E2DE-41DE-B557-6505A775A609}" WorkUnitID="{77E68E32-1EC0-4CD8-BABB-69542BCBAEEF}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="clickShardBass" ID="{F3975446-A355-42B0-A44C-682A81EC94A1}" WorkUnitID="{77E68E32-1EC0-4CD8-BABB-69542BCBAEEF}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="timeSlow" ID="{7432C405-A0F0-4588-88DD-F086964235C3}" WorkUnitID="{77E68E32-1EC0-4CD8-BABB-69542BCBAEEF}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="clickShardCello" ID="{AA8B4DCE-2965-45E7-87E2-6CBCEBD9956B}" WorkUnitID="{77E68E32-1EC0-4CD8-BABB-69542BCBAEEF}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="clickShardSwells" ID="{7C406FA2-124B-49F5-8908-279CCEB0A904}" WorkUnitID="{77E68E32-1EC0-4CD8-BABB-69542BCBAEEF}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="clickShardMangled" ID="{1D76F857-6F3E-4B4C-B032-8D3A0E7968CC}" WorkUnitID="{77E68E32-1EC0-4CD8-BABB-69542BCBAEEF}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="clickShardArp" ID="{4CC375B5-2120-4DD6-AE60-BFCB834C33BB}" WorkUnitID="{77E68E32-1EC0-4CD8-BABB-69542BCBAEEF}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="clickShardScrubs" ID="{852AFB74-E876-4EBE-87B0-F1CACCFFCD9D}" WorkUnitID="{77E68E32-1EC0-4CD8-BABB-69542BCBAEEF}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="clickShardViola" ID="{D8D38A57-A540-4F2F-8CCB-0635DBF215F3}" WorkUnitID="{77E68E32-1EC0-4CD8-BABB-69542BCBAEEF}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="music" ID="{1E075880-6232-46D5-832C-7AAB79B0D699}" WorkUnitID="{77E68E32-1EC0-4CD8-BABB-69542BCBAEEF}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
