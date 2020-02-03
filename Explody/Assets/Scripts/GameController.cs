@@ -201,6 +201,7 @@ public class GameController : MonoBehaviour
 		StarRating.gameObject.SetActive ( false );
 		ScoreDisplay.Hide ();
 		OnDisplayNextLevel();
+		AkSoundEngine.PostEvent("playLevelStart", gameObject);
 	}
 
     // Update is called once per frame

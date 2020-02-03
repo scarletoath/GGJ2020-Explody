@@ -216,7 +216,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 328ee677c01ed84cbabb69542bcbaeef
     GuidInternal: 
-    m_lastTime: -8586209340904775808
+    m_lastTime: -8586209030334775808
     List:
     - name: clickShardArp
       guid: b575c34c2021d64dae60bfcb834c33bb
@@ -769,5 +769,6 @@ MonoBehaviour:
   - /PLODE
   - /PLODE/Events
   - /PLODE/Events/Default Work Unit
+  - /PLODE/Events/Default Work Unit/music
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

@@ -1,7 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	182906760	playExplosion			\Default Work Unit\music\playExplosion	
 	596780413	clickShardScrubs			\Default Work Unit\music\clickShardScrubs	
-	905755037	playReplayEnd			\Default Work Unit\music\playReplayEnd	
 	997151998	playReplay			\Default Work Unit\music\playReplay	
 	1808369568	clickShardArp			\Default Work Unit\music\clickShardArp	
 	2301652195	playTimeSlow			\Default Work Unit\music\playTimeSlow	

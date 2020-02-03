@@ -23,13 +23,6 @@
 				</Event>
 				<Event Name="playLevelEnd" ID="{B7B994F0-A318-4030-BF37-74A31AC31750}">
 					<ChildrenList>
-						<Action Name="" ID="{DC9DBFC8-A5E6-4149-AA27-0FB640381041}" ShortID="540529496">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="ambience" ID="{81A23B5B-FBCF-424A-B263-805CBF54C8AC}" WorkUnitID="{84B482EF-7721-497E-9BD7-C0DD224B323B}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
 						<Action Name="" ID="{C1E30A56-042A-4861-B816-527356661A58}" ShortID="47080149">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
@@ -1398,23 +1391,31 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="playReplayEnd" ID="{3C76A1EA-2C0B-4FD2-9313-144C27BCBD6E}">
-							<ChildrenList>
-								<Action Name="" ID="{0EF34B0F-0E20-4204-82FA-AEC48B73A958}" ShortID="896535020">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-										<Property Name="FadeTime" Type="Real64" Value="1"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="replay" ID="{80D6BA00-EAA5-493E-874A-1DAA1FB35684}" WorkUnitID="{59F0D7F4-7392-49A1-8D95-D85316ECBB79}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
 					</ChildrenList>
 				</Folder>
+				<Event Name="playReplayEnd" ID="{3C76A1EA-2C0B-4FD2-9313-144C27BCBD6E}">
+					<ChildrenList>
+						<Action Name="" ID="{0EF34B0F-0E20-4204-82FA-AEC48B73A958}" ShortID="896535020">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="7"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="replay" ID="{80D6BA00-EAA5-493E-874A-1DAA1FB35684}" WorkUnitID="{59F0D7F4-7392-49A1-8D95-D85316ECBB79}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{DC9DBFC8-A5E6-4149-AA27-0FB640381041}" ShortID="540529496">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ambience" ID="{81A23B5B-FBCF-424A-B263-805CBF54C8AC}" WorkUnitID="{84B482EF-7721-497E-9BD7-C0DD224B323B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

@@ -1,4 +1,5 @@
 Event	ID	Name			Wwise Object Path	Notes
+	905755037	playReplayEnd			\Default Work Unit\playReplayEnd	
 	978238807	playSnap			\Default Work Unit\playSnap	
 	3714850613	playLevelStart			\Default Work Unit\playLevelStart	
 	3860608094	playLevelEnd			\Default Work Unit\playLevelEnd	

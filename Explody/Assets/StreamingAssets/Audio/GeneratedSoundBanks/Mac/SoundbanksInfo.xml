@@ -16,8 +16,9 @@
 			<ShortName>sfx</ShortName>
 			<Path>sfx.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3860608094" Name="playLevelEnd" ObjectPath="\Events\Default Work Unit\playLevelEnd" DurationType="Infinite"/>
+				<Event Id="3860608094" Name="playLevelEnd" ObjectPath="\Events\Default Work Unit\playLevelEnd" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="3714850613" Name="playLevelStart" ObjectPath="\Events\Default Work Unit\playLevelStart" DurationType="Infinite"/>
+				<Event Id="905755037" Name="playReplayEnd" ObjectPath="\Events\Default Work Unit\playReplayEnd" DurationType="Infinite"/>
 				<Event Id="978238807" Name="playSnap" ObjectPath="\Events\Default Work Unit\playSnap" DurationType="OneShot" DurationMin="0.291667" DurationMax="0.291667"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
@@ -51,7 +52,6 @@
 				<Event Id="4093498252" Name="clickShardViola" ObjectPath="\Events\Default Work Unit\music\clickShardViola" DurationType="OneShot" DurationMin="0.164062" DurationMax="0.164062"/>
 				<Event Id="182906760" Name="playExplosion" ObjectPath="\Events\Default Work Unit\music\playExplosion" DurationType="Infinite"/>
 				<Event Id="997151998" Name="playReplay" ObjectPath="\Events\Default Work Unit\music\playReplay" DurationType="Infinite"/>
-				<Event Id="905755037" Name="playReplayEnd" ObjectPath="\Events\Default Work Unit\music\playReplayEnd" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="2301652195" Name="playTimeSlow" ObjectPath="\Events\Default Work Unit\music\playTimeSlow" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>

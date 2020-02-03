@@ -67,6 +67,21 @@
 						<Sound Name="ambience" ID="{81A23B5B-FBCF-424A-B263-805CBF54C8AC}" ShortID="930407598">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>50</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-2400</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>4</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -87,7 +102,7 @@
 										<Property Name="TrimEnd" Type="Real64" Value="105"/>
 										<Property Name="VolumeOffset" Type="Real64">
 											<ValueList>
-												<Value>14</Value>
+												<Value>24</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -119,7 +134,7 @@
 										<Property Name="TrimEnd" Type="Real64" Value="0.291666666666667"/>
 										<Property Name="VolumeOffset" Type="Real64">
 											<ValueList>
-												<Value>12</Value>
+												<Value>24</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -152,6 +167,11 @@
 									<PropertyList>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 										<Property Name="TrimEnd" Type="Real64" Value="0.164062500000001"/>
+										<Property Name="VolumeOffset" Type="Real64">
+											<ValueList>
+												<Value>16</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>Retrologue 01-03.wav</AudioFile>

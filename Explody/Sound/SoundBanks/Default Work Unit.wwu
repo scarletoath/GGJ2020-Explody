@@ -8,6 +8,7 @@
 						<ObjectRef Name="playLevelEnd" ID="{B7B994F0-A318-4030-BF37-74A31AC31750}" WorkUnitID="{77E68E32-1EC0-4CD8-BABB-69542BCBAEEF}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="playSnap" ID="{9534F885-5980-448D-BC41-852BC3FC3C66}" WorkUnitID="{77E68E32-1EC0-4CD8-BABB-69542BCBAEEF}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="playLevelStart" ID="{B2046068-FA5D-4835-A72F-D00D24D94273}" WorkUnitID="{77E68E32-1EC0-4CD8-BABB-69542BCBAEEF}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="playReplayEnd" ID="{3C76A1EA-2C0B-4FD2-9313-144C27BCBD6E}" WorkUnitID="{77E68E32-1EC0-4CD8-BABB-69542BCBAEEF}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
