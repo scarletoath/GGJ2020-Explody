@@ -49,7 +49,7 @@ public class TimeSlow : MonoBehaviour
             {
                 if(!playedSound)
                 {
-                    AkSoundEngine.PostEvent("timeSlow", gameObject);
+                    AkSoundEngine.PostEvent("playTimeSlow", gameObject);
                     playedSound = true;
                 }
                 Time.timeScale = targetTimeScale;
