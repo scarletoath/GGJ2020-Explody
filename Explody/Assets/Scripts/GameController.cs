@@ -200,7 +200,7 @@ public class GameController : MonoBehaviour
         playbackManager = this.GetComponent<PlaybackManager>();
 		StarRating.gameObject.SetActive ( false );
 		ScoreDisplay.Hide ();
-		OnDisplayNextLevel();
+		OnDisplayNextLevel(true);
 		AkSoundEngine.PostEvent("playLevelStart", gameObject);
 	}
 
@@ -208,7 +208,7 @@ public class GameController : MonoBehaviour
     void Update() {
         if (Input.GetKeyDown(KeyCode.Space)) {
 			if ( bReadyForGameplay ) {
-				OnDisplayNextLevel();
+				OnDisplayNextLevel(false);
 			} else if ( !bStarted && !bReadyForReplay ) { // TODO : remove readyForReplay check once states are in
                 OnStartNextLevel();
             } else if( bReadyForReplay ) {
@@ -227,15 +227,17 @@ public class GameController : MonoBehaviour
         Application.Quit();
     }
 
-	public void OnDisplayNextLevel()
+	public void OnDisplayNextLevel(bool firstTime)
 	{
 		Debug.Log("GameController::OnDisplayNextLevel() Called.");
 		StarRating.gameObject.SetActive(false);
 		ScoreDisplay.Hide();
 		snaps.Clear();
 		scoreTally.CreateSubScore();
-		AkSoundEngine.PostEvent("playLevelEnd", gameObject);// Wwise Audio Event @ekampa Level begin (after replay, before explosion)
-
+		if(!firstTime)
+		{
+			AkSoundEngine.PostEvent("playLevelEnd", gameObject);// Wwise Audio Event @ekampa Level begin (after replay, before explosion)
+		}
 		levelManager.ClearLevel();
 		levelManager.SpawnNextLevel();
 		bReadyForGameplay = false;
