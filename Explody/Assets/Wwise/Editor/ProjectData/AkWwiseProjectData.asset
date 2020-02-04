@@ -191,7 +191,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 770ad0eed0cbda4f95a88e7cbd179bfa
     GuidInternal: 
-    m_lastTime: -8586209340904775808
+    m_lastTime: -8586209004764775808
     List:
     - name: music
       guid: 917c176678a2ed40827bbffa72226d49
@@ -216,7 +216,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 328ee677c01ed84cbabb69542bcbaeef
     GuidInternal: 
-    m_lastTime: -8586209030334775808
+    m_lastTime: -8586208998194775808
     List:
     - name: clickShardArp
       guid: b575c34c2021d64dae60bfcb834c33bb
@@ -354,8 +354,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit/playLevelEnd
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: playLevelStart
       guid: 686004b25dfa3548a72fd00d24d94273
       id: 3714850613
@@ -388,14 +388,12 @@ MonoBehaviour:
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: music
-        ObjectType: 4
       - ElementName: playReplayEnd
         ObjectType: 3
-      Path: Default Work Unit/music/playReplayEnd
+      Path: Default Work Unit/playReplayEnd
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: playSnap
       guid: 85f8349580598d44bc41852bc3fc3c66
       id: 978238807
