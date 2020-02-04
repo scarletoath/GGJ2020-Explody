@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<IncrementalBankBuild Version="6" Flags="257159163">
+<IncrementalBankBuild Version="6" Flags="257159162">
 	<Platform GUID="{52EE45C2-8B37-471E-AB88-C411A677AD4D}">
 		<Banks>
 			<Language ID="393239870">
@@ -10,7 +10,7 @@
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="1715492212" Timestamp="1580707072"/>
+				<File Name="" Hash="4291309017" Timestamp="1580845303"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
@@ -24,21 +24,21 @@
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="475999838" Timestamp="1580707072"/>
+				<File Name="" Hash="76860923" Timestamp="1580845304"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
 	<Platform GUID="{201B3199-04B7-4B51-A084-6D75B7381011}">
 		<Banks>
 			<Language ID="393239870">
-				<File Name="Init" Hash="1721544654" Timestamp="1580673638"/>
-				<File Name="music" Hash="2715470646" Timestamp="1580706886"/>
-				<File Name="sfx" Hash="27333642" Timestamp="1580707073"/>
+				<File Name="Init" Hash="1721544654" Timestamp="1580845305"/>
+				<File Name="music" Hash="2715470646" Timestamp="1580845305"/>
+				<File Name="sfx" Hash="27333642" Timestamp="1580845305"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="2633442642" Timestamp="1580707073"/>
+				<File Name="" Hash="3635317239" Timestamp="1580845305"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
@@ -52,7 +52,7 @@
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="502204872" Timestamp="1580707073"/>
+				<File Name="" Hash="3008412325" Timestamp="1580845304"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
