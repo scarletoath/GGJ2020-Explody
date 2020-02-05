@@ -27,7 +27,7 @@ public class GameController : MonoBehaviour
 		{
 			Scores.Add ( 0 );
 			SubCount = 0;
-			Debug.Log ( $"created sub score entry {Scores.Count}" );
+			//Debug.Log ( $"created sub score entry {Scores.Count}" );
 		}
 
 		public void AddSubScore ( float Score )
@@ -35,7 +35,7 @@ public class GameController : MonoBehaviour
 			Debug.Assert ( Scores.Count > 0 );
 			float SubTotal = Scores [ Scores.Count - 1 ] * SubCount + Score;
 			Scores [ Scores.Count - 1 ] = SubTotal / ++SubCount;
-			Debug.Log ( $"add sub score {Score}, now {LastScore}" );
+			//Debug.Log ( $"add sub score {Score}, now {LastScore}" );
 		}
 
 	}
@@ -181,8 +181,8 @@ public class GameController : MonoBehaviour
 
     PlaybackManager playbackManager;
     bool bStarted = false;
-    bool bReadyForReplay = false;
-	bool bReadyForGameplay = true;
+    bool bReadyForDisplay = true;
+    bool bReplaying = false;
     float timeLeft = 20.0f;
 
 	private readonly HashSet <SnapToLocation> snaps = new HashSet <SnapToLocation> ();
@@ -206,15 +206,19 @@ public class GameController : MonoBehaviour
 
     // Update is called once per frame
     void Update() {
-        if (Input.GetKeyDown(KeyCode.Space)) {
-			if ( bReadyForGameplay ) {
-				OnDisplayNextLevel(false);
-			} else if ( !bStarted && !bReadyForReplay ) { // TODO : remove readyForReplay check once states are in
-                OnStartNextLevel();
-            } else if( bReadyForReplay ) {
-                //OnStartPlayback(); // TODO : Uncomment when ready to hook up
-				if ( !ScoreDisplay.IsRamping )
-					OnStartNextLevel ();
+
+        if ((bReadyForDisplay || !bStarted) && !bReplaying)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                Debug.Log("User has clicked and something should probably happen ((prep=" + bReadyForDisplay + "  play=" + bStarted + " replay=" + bReplaying + ")");
+                if (bReadyForDisplay)
+                {
+                    OnDisplayNextLevel(false);
+                } else if (!bStarted)
+                {
+                    OnStartNextLevel();
+                }
             }
         }
         if ( Input.GetKeyDown( KeyCode.Escape ) ) {
@@ -240,7 +244,7 @@ public class GameController : MonoBehaviour
 		}
 		levelManager.ClearLevel();
 		levelManager.SpawnNextLevel();
-		bReadyForGameplay = false;
+        bReadyForDisplay = false;
 	}
 
 	public void OnStartNextLevel()
@@ -263,18 +267,16 @@ public class GameController : MonoBehaviour
         StarRating.gameObject.SetActive ( true );
 		StarRating.SetRating ( scoreTally.LastScore , true );
 		ScoreDisplay.ShowScore ( scoreTally.LastScore * scoreTally.LastScore * 2500000 );
-        bReadyForReplay = true;
         StartCoroutine( TriggerPlayback() );
+        bReplaying = true;
         bStarted = false;
 	}
 
     System.Collections.IEnumerator TriggerPlayback()
     {
-        if ( bReadyForReplay ) {
-            yield return new WaitForSeconds( .5f );
-			AkSoundEngine.PostEvent("playReplay", gameObject);// Wwise Audio Event @ekampa Play replay
-			playbackManager.StartPlayback();
-        }
+        yield return new WaitForSeconds( .5f );
+        AkSoundEngine.PostEvent("playReplay", gameObject);// Wwise Audio Event @ekampa Play replay
+        playbackManager.StartPlayback();
     }
 
 	System.Collections.IEnumerator TriggerExplosionAfterSwell()
@@ -299,12 +301,13 @@ public class GameController : MonoBehaviour
 
     public void OnPlaybackDone()
     {
-		AkSoundEngine.PostEvent("playReplayEnd", gameObject);// Wwise Audio Event @ekampa End of Replay
-		Debug.Log( "Wwise end replay" );
-		bReadyForGameplay = true;
+        Debug.Log("GameController::OnPlaybackDone() Called");
+        AkSoundEngine.PostEvent("playReplayEnd", gameObject);// Wwise Audio Event @ekampa End of Replay
+        bReadyForDisplay = true;
+        bReplaying = false;
     }
 
-	public void ShowMenu()
+    public void ShowMenu()
     {
         // Triggered by the player
         // Pauses the game
