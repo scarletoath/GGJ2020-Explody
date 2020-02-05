@@ -51,6 +51,7 @@ MonoBehaviour:
   ScoreDisplay: {fileID: 0}
   InitialExplosionFx: {fileID: 7546192534093689638, guid: b24ab08635d9c0a4db2a612492299471,
     type: 3}
+  interactRadius: 4
   levelManager:
     LevelObjects:
     - {fileID: 8234240141397215286, guid: e7db5db8792eba747b5f997f17a3dd6b, type: 3}

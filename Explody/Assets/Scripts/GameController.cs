@@ -174,8 +174,9 @@ public class GameController : MonoBehaviour
 	[SerializeField] private StarRating StarRating;
 	[SerializeField] private ScoreDisplay ScoreDisplay;
 	[SerializeField] ParticleSystem InitialExplosionFx;
+    [SerializeField] private float interactRadius;
 
-	[Space] 
+    [Space] 
 	
 	[SerializeField] private LevelManager levelManager;
 
@@ -209,8 +210,9 @@ public class GameController : MonoBehaviour
 
         if ((bReadyForDisplay || !bStarted) && !bReplaying)
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && IsMouseNearCenter(interactRadius))
             {
+
                 Debug.Log("User has clicked and something should probably happen ((prep=" + bReadyForDisplay + "  play=" + bStarted + " replay=" + bReplaying + ")");
                 if (bReadyForDisplay)
                 {
@@ -335,6 +337,12 @@ public class GameController : MonoBehaviour
 			}
 		}
 	}
+
+    bool IsMouseNearCenter (float maxDistance)
+    {
+        Vector2 mousePos = Camera.main.ScreenToWorldPoint((Vector2)Input.mousePosition);
+        return (Vector2.Distance(mousePos, Vector2.zero) < maxDistance);
+    }
 
     //IEnumerator SimpleTimer() {
     //    for ( int i = 20; i > 0; --i ) {
