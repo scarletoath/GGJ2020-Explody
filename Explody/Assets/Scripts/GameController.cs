@@ -173,17 +173,24 @@ public class GameController : MonoBehaviour
 	[SerializeField] private TimeSlow TimeSlow;
 	[SerializeField] private StarRating StarRating;
 	[SerializeField] private ScoreDisplay ScoreDisplay;
-	[SerializeField] ParticleSystem InitialExplosionFx;
+	[SerializeField] private ParticleSystem InitialExplosionFx;
     [SerializeField] private float interactRadius;
 
     [Space] 
 	
 	[SerializeField] private LevelManager levelManager;
 
+    [Space]
+
+    [SerializeField] private GameObject TitleScreen;
+    [SerializeField] private GameObject ControllerTutorial;
+
     PlaybackManager playbackManager;
     bool bStarted = false;
     bool bReadyForDisplay = true;
     bool bReplaying = false;
+    bool bTitleScreenVisible = true;
+    bool bTutorialVisible = true;
     float timeLeft = 20.0f;
 
 	private readonly HashSet <SnapToLocation> snaps = new HashSet <SnapToLocation> ();
@@ -208,7 +215,16 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update() {
 
-        if ((bReadyForDisplay || !bStarted) && !bReplaying)
+        if(bTitleScreenVisible)
+        {
+            bTitleScreenVisible = TitleScreen.activeInHierarchy;
+            if(Input.GetMouseButtonDown(0) && IsMouseNearCenter(interactRadius) && TitleScreen.activeInHierarchy)
+            {
+                Debug.Log("Starting fade out time for intro image");
+                TitleScreen.GetComponent<FadeOutImage>().StartFadeOut();
+            }
+        }
+        if (!bTitleScreenVisible && ((bReadyForDisplay || !bStarted) && !bReplaying))
         {
             if (Input.GetMouseButtonDown(0) && IsMouseNearCenter(interactRadius))
             {
@@ -256,6 +272,12 @@ public class GameController : MonoBehaviour
         Debug.Log( "GameController::OnStartNextLevel() Called." );
 		AkSoundEngine.PostEvent("playExplosion", gameObject);
 		bStarted = true;
+        if(bTutorialVisible)
+        {
+            bTutorialVisible = false;
+            Debug.Log("Starting fade out time for tutorial image");
+            ControllerTutorial.GetComponent<FadeOutImage>().StartFadeOut();
+        }
 		StartCoroutine(TriggerExplosionAfterSwell());
 	}
 
