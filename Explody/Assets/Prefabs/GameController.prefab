@@ -79,6 +79,11 @@ MonoBehaviour:
     - SelectionMode: 1
       ObjectIndex: 4
       RandomObjectIndices: 
+  TitleScreen: {fileID: 0}
+  ControllerTutorials:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &995737547242220509
 MonoBehaviour:
   m_ObjectHideFlags: 0

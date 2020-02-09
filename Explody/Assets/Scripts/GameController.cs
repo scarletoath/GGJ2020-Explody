@@ -183,7 +183,7 @@ public class GameController : MonoBehaviour
     [Space]
 
     [SerializeField] private GameObject TitleScreen;
-    [SerializeField] private GameObject ControllerTutorial;
+    [SerializeField] private GameObject[] ControllerTutorials;
 
     PlaybackManager playbackManager;
     bool bStarted = false;
@@ -276,7 +276,10 @@ public class GameController : MonoBehaviour
         {
             bTutorialVisible = false;
             Debug.Log("Starting fade out time for tutorial image");
-            ControllerTutorial.GetComponent<FadeOutImage>().StartFadeOut();
+            foreach (GameObject tutImage in ControllerTutorials)
+            {
+                tutImage.GetComponent<FadeOutImage>().StartFadeOut();
+            }
         }
 		StartCoroutine(TriggerExplosionAfterSwell());
 	}
